@@ -16,4 +16,4 @@ jdk:
 
 script: "mvn test verify"
 
-after_script: "mvn site coveralls:cobertura"
+after_script: "mvn site coveralls:report"
