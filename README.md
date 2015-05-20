@@ -11,12 +11,13 @@
 
 [![Build Status](https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent.svg)](https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent)
 [![Coverage Status](https://coveralls.io/repos/chilloutdevelopment/pl.chilldev.parent/badge.png?branch=develop)](https://coveralls.io/r/chilloutdevelopment/pl.chilldev.parent)
+[![Dependency Status](https://www.versioneye.com/user/projects/555cb2e4634daa30fb00090e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/555cb2e4634daa30fb00090e)
 
 # Usage
 
 To use it in your project, simply define `pl.chilldev.parent:parent` as your project parent POM:
 
-```
+```xml
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
