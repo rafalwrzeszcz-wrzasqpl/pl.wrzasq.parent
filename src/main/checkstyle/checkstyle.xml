@@ -19,14 +19,6 @@
         <property name="headerFile" value="${checkstyle.project.basedir}/src/main/checkstyle/java.header"/>
         <property name="fileExtensions" value="java"/>
     </module>
-    <module name="RegexpHeader">
-        <property name="headerFile" value="src/main/checkstyle/md.header"/>
-        <property name="fileExtensions" value="md"/>
-    </module>
-    <module name="RegexpHeader">
-        <property name="headerFile" value="src/main/checkstyle/xml.header"/>
-        <property name="fileExtensions" value="xml"/>
-    </module>
 
     <module name="TreeWalker">
         <property name="cacheFile" value="${checkstyle.cache.file}"/>
