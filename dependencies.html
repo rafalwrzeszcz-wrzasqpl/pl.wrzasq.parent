@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>ChillDev Parent OpenSouece &#x2013; Project Dependencies</title>
+		<title>ChillDev Parent &#x2013; Project Dependencies</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -33,7 +33,7 @@
 
 	</head>
 
-	<body class="page-dependencies project-parent-opensource" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-dependencies project-parent" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -57,15 +57,25 @@
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Parent Project <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li ><a href="../index.html" title="ChillDev Parent">ChillDev Parent</a></li>
+									<li ><a href="parent-opensource/index.html" title="ChillDev Parent OpenSouece">ChillDev Parent OpenSouece</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guide <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribution guide <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li ><a href="guide/deploy.html" title="Deploy profile">Deploy profile</a></li>
+									<li ><a href="gitflow.html" title="Git workflow">Git workflow</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li ><a href="guide/intro.html" title="Introduction">Introduction</a></li>
+									<li ><a href="guide/properties.html" title="Properties">Properties</a></li>
+									<li ><a href="guide/plugins.html" title="Build plugins">Build plugins</a></li>
+									<li ><a href="guide/reports.html" title="Reporting plugins">Reporting plugins</a></li>
+									<li ><a href="guide/dependencies.html" title="Dependencies">Dependencies</a></li>
 								</ul>
 							</li>
 							<li class="dropdown active">
@@ -76,11 +86,13 @@
 										<ul class="dropdown-menu">
 											<li ><a href="integration.html" title="Continuous Integration">Continuous Integration</a></li>
 											<li class="active"><a href="" title="Dependencies">Dependencies</a></li>
+											<li ><a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a></li>
 											<li ><a href="dependency-info.html" title="Dependency Information">Dependency Information</a></li>
 											<li ><a href="distribution-management.html" title="Distribution Management">Distribution Management</a></li>
 											<li ><a href="index.html" title="About">About</a></li>
 											<li ><a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a></li>
 											<li ><a href="license.html" title="Project License">Project License</a></li>
+											<li ><a href="modules.html" title="Project Modules">Project Modules</a></li>
 											<li ><a href="plugin-management.html" title="Plugin Management">Plugin Management</a></li>
 											<li ><a href="plugins.html" title="Project Plugins">Project Plugins</a></li>
 											<li ><a href="team-list.html" title="Project Team">Project Team</a></li>
@@ -91,6 +103,7 @@
 									<li class="dropdown-submenu ">
 										<a href="project-reports.html" title="Project Reports">Project Reports</a>
 										<ul class="dropdown-menu">
+											<li ><a href="checkstyle-aggregate.html" title="Checkstyle">Checkstyle</a></li>
 											<li ><a href="surefire-report.html" title="Surefire Report">Surefire Report</a></li>
 											<li ><a href="cobertura/index.html" title="Cobertura Test Coverage">Cobertura Test Coverage</a></li>
 										</ul>
@@ -226,17 +239,17 @@
  <div class="section"> 
   <h3 id="Dependency_Tree">Dependency Tree</h3> 
   <ul> 
-   <li>pl.chilldev.parent:parent-opensource:pom:0.0.1 <button title="Information" class="btn btn-link btn-small" type="button" data-toggle="collapse" data-target="#_dep0"><i class="icon-info-sign"></i></button> 
+   <li>pl.chilldev.parent:parent:pom:0.0.1 <button title="Information" class="btn btn-link btn-small" type="button" data-toggle="collapse" data-target="#_dep0"><i class="icon-info-sign"></i></button> 
     <div id="_dep0" style="" class=" collapse"> 
      <table border="0" class="bodyTable table table-striped table-hover"> 
       <thead> 
        <tr class="a"> 
-        <th>ChillDev Parent OpenSouece</th> 
+        <th>ChillDev Parent</th> 
        </tr> 
       </thead> 
       <tbody> 
        <tr class="b"> 
-        <td> <p><b>Description: </b>More detailed bootstrap with additional setup for open source projects.</p> <p><b>URL: </b><a class="externalLink" href="https://chilloutdevelopment.github.io/pl.chilldev.parent/parent-opensource/">https://chilloutdevelopment.github.io/pl.chilldev.parent/parent-opensource/</a></p> <p><b>Project License: </b><a class="externalLink" href="http://mit-license.org/">The MIT license</a></p></td> 
+        <td> <p><b>Description: </b>Generic bootstrap for all of the projects.</p> <p><b>URL: </b><a class="externalLink" href="http://chilloutdevelopment.github.io/pl.chilldev.parent">http://chilloutdevelopment.github.io/pl.chilldev.parent</a></p> <p><b>Project License: </b><a class="externalLink" href="http://mit-license.org/">The MIT license</a></p></td> 
        </tr> 
       </tbody> 
      </table> 
@@ -313,7 +326,7 @@
 <a name="Licenses"></a> 
 <div class="section"> 
  <h2 id="Licenses">Licenses</h2> 
- <p><b>The MIT license: </b>ChillDev Parent OpenSouece</p> 
+ <p><b>The MIT license: </b>ChillDev Parent</p> 
  <p><b>Apache 2: </b>Objenesis</p> 
  <p><b>New BSD License: </b>Hamcrest Core</p> 
  <p><b>Eclipse Public License 1.0: </b>JUnit</p> 
@@ -437,17 +450,33 @@
 				</div>
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Parent Project</li>
+						<li class="nav-header">Modules</li>
 						<li >
-							<a href="../index.html" title="ChillDev Parent">ChillDev Parent</a>
+							<a href="parent-opensource/index.html" title="ChillDev Parent OpenSouece">ChillDev Parent OpenSouece</a>
 						</li>
 					</ul>
 				</div>
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Guide</li>
+						<li class="nav-header">Contribution guide</li>
 						<li >
-							<a href="guide/deploy.html" title="Deploy profile">Deploy profile</a>
+							<a href="gitflow.html" title="Git workflow">Git workflow</a>
+						</li>
+						<li class="nav-header">User guide</li>
+						<li >
+							<a href="guide/intro.html" title="Introduction">Introduction</a>
+						</li>
+						<li >
+							<a href="guide/properties.html" title="Properties">Properties</a>
+						</li>
+						<li >
+							<a href="guide/plugins.html" title="Build plugins">Build plugins</a>
+						</li>
+						<li >
+							<a href="guide/reports.html" title="Reporting plugins">Reporting plugins</a>
+						</li>
+						<li >
+							<a href="guide/dependencies.html" title="Dependencies">Dependencies</a>
 						</li>
 					</ul>
 				</div>
@@ -464,6 +493,9 @@
 							<a href="#" title="Dependencies">Dependencies</a>
 						</li>
 						<li >
+							<a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a>
+						</li>
+						<li >
 							<a href="dependency-info.html" title="Dependency Information">Dependency Information</a>
 						</li>
 						<li >
@@ -477,6 +509,9 @@
 						</li>
 						<li >
 							<a href="license.html" title="Project License">Project License</a>
+						</li>
+						<li >
+							<a href="modules.html" title="Project Modules">Project Modules</a>
 						</li>
 						<li >
 							<a href="plugin-management.html" title="Plugin Management">Plugin Management</a>
