@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# This file is part of the ChillDev-Parent.
+#
+# @license http://mit-license.org/ The MIT license
+# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+-->
+<project
+    xmlns="http://maven.apache.org/DECORATION/1.4.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://maven.apache.org/DECORATION/1.4.0 http://maven.apache.org/xsd/decoration-1.4.0.xsd
+">
+    <skin>
+        <groupId>lt.velykis.maven.skins</groupId>
+        <artifactId>reflow-maven-skin</artifactId>
+        <version>1.1.1</version>
+    </skin>
+
+    <bannerLeft>
+        <name>${project.name}</name>
+    </bannerLeft>
+
+    <bannerRight>
+        <name>&lt;img src="http://static.wrzasq.pl/images/wrzasqpl.png" alt="Wrzasq.pl"/&gt;</name>
+        <href>http://wrzasq.pl</href>
+    </bannerRight>
+
+    <publishDate position="bottom"/>
+    <version position="bottom"/>
+
+    <poweredBy>
+        <logo
+            name="Maven"
+            href="http://maven.apache.org/"
+            img="http://maven.apache.org/images/logos/maven-feather.png"
+            alt="Apache Maven"
+            title="Build with Maven"/>
+        <logo
+            name="Chillout Development"
+            href="http://chilldev.pl"
+            img="http://static.chilldev.pl/images/chilldevpl.png"
+            alt="Chillout Development"
+            title="Chillout Development"/>
+        <logo
+            name="Wrzasq.pl"
+            href="http://wrzasq.pl"
+            img="http://static.chilldev.pl/images/wrzasqpl.png"
+            alt="Wrzasq.pl"
+            title="Wrzasq.pl"/>
+    </poweredBy>
+
+    <body>
+        <menu name="Main" inherit="top">
+            <item name="GitHub project" href="https://github.com/chilloutdevelopment/pl.chilldev.parent/"/>
+            <item name="Chillout Development" href="http://chilldev.pl/"/>
+            <item name="Wrzasq.pl" href="http://wrzasq.pl/"/>
+            <item name="ChillDev @ Facebook" href="https://www.facebook.com/chilldev"/>
+            <item name="Wrzasq.pl @ Facebook" href="https://www.facebook.com/wrzasqpl"/>
+        </menu>
+
+        <menu ref="modules"/>
+
+        <menu name="Contribution guide">
+            <item name="Git workflow" href="gitflow.html"/>
+        </menu>
+
+        <menu name="User guide">
+            <item name="Introduction" href="guide/intro.html"/>
+            <item name="Properties" href="guide/properties.html"/>
+            <item name="Build plugins" href="guide/plugins.html"/>
+            <item name="Reporting plugins" href="guide/reports.html"/>
+            <item name="Dependencies" href="guide/dependencies.html"/>
+        </menu>
+
+        <menu ref="reports"/>
+    </body>
+
+    <custom>
+        <reflowSkin>
+            <highlightJs>true</highlightJs>
+            <!-- it really looks better, but we can't use it because of our dark logos
+            <navbarInverse>true</navbarInverse>
+            -->
+            <brand>
+                <name>&lt;img src="http://static.chilldev.pl/images/chilldevpl.png" alt="Chillout Development"/&gt;</name>
+                <href>http://chilldev.pl</href>
+            </brand>
+            <bottomNav maxSpan="12">
+                <column>Main</column>
+                <column>modules</column>
+                <column>Contribution guide|User guide</column>
+                <column>reports</column>
+            </bottomNav>
+        </reflowSkin>
+    </custom>
+</project>
