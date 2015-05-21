@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>ChillDev Parent &#x2013; Git repository</title>
+		<title>ChillDev Parent OpenSouece &#x2013; Continuous Integration</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -33,7 +33,7 @@
 
 	</head>
 
-	<body class="page-gitflow project-parent" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-integration project-parent-opensource" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -57,42 +57,30 @@
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Parent Project <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li ><a href="parent-opensource/index.html" title="ChillDev Parent OpenSouece">ChillDev Parent OpenSouece</a></li>
+									<li ><a href="../index.html" title="ChillDev Parent">ChillDev Parent</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guide <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li ><a href="guide/deploy.html" title="Deploy profile">Deploy profile</a></li>
 								</ul>
 							</li>
 							<li class="dropdown active">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribution guide <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li class="active"><a href="" title="Git workflow">Git workflow</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li ><a href="guide/intro.html" title="Introduction">Introduction</a></li>
-									<li ><a href="guide/properties.html" title="Properties">Properties</a></li>
-									<li ><a href="guide/plugins.html" title="Build plugins">Build plugins</a></li>
-									<li ><a href="guide/reports.html" title="Reporting plugins">Reporting plugins</a></li>
-									<li ><a href="guide/dependencies.html" title="Dependencies">Dependencies</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Documentation <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu ">
 										<a href="project-info.html" title="Project Information">Project Information</a>
 										<ul class="dropdown-menu">
-											<li ><a href="integration.html" title="Continuous Integration">Continuous Integration</a></li>
+											<li class="active"><a href="" title="Continuous Integration">Continuous Integration</a></li>
 											<li ><a href="dependencies.html" title="Dependencies">Dependencies</a></li>
-											<li ><a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a></li>
 											<li ><a href="dependency-info.html" title="Dependency Information">Dependency Information</a></li>
 											<li ><a href="distribution-management.html" title="Distribution Management">Distribution Management</a></li>
 											<li ><a href="index.html" title="About">About</a></li>
 											<li ><a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a></li>
 											<li ><a href="license.html" title="Project License">Project License</a></li>
-											<li ><a href="modules.html" title="Project Modules">Project Modules</a></li>
 											<li ><a href="plugin-management.html" title="Plugin Management">Plugin Management</a></li>
 											<li ><a href="plugins.html" title="Project Plugins">Project Plugins</a></li>
 											<li ><a href="team-list.html" title="Project Team">Project Team</a></li>
@@ -103,7 +91,6 @@
 									<li class="dropdown-submenu ">
 										<a href="project-reports.html" title="Project Reports">Project Reports</a>
 										<ul class="dropdown-menu">
-											<li ><a href="checkstyle-aggregate.html" title="Checkstyle">Checkstyle</a></li>
 											<li ><a href="surefire-report.html" title="Surefire Report">Surefire Report</a></li>
 											<li ><a href="cobertura/index.html" title="Cobertura Test Coverage">Cobertura Test Coverage</a></li>
 										</ul>
@@ -140,24 +127,26 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-<!-- -
-# This file is part of the ChillDev-Parent.
-#
-# @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl. -->
-<div class="page-header">
- <h1>Git repository</h1>
+<div class="section"> 
+ <div class="page-header">
+  <h2 id="Overview">Overview</h2>
+ </div> 
+ <a name="Overview"></a> 
+ <p>This project uses <a class="externalLink" href="https://travis-ci.org/">Travis CI</a>.</p> 
 </div> 
-<p>All project sources and related resources are stored in <a class="externalLink" href="https://github.com/chilloutdevelopment/pl.chilldev.parent.git">Git repository</a>. To standardize workflow with repository, <i>ChillDev-Parent</i> follows <a class="externalLink" href="http://nvie.com/posts/a-successful-git-branching-model/">Git-flow</a> policy. In order to synchronize your repository you should call <tt>git flow init</tt> in your repository directory with following settings:</p> 
-<ul> 
- <li><i>Branch name for production releases:</i> - <tt>master</tt></li> 
- <li><i>Branch name for “next release” development:</i> - <tt>develop</tt></li> 
- <li><i>Feature branches?</i> - <tt>feature/</tt></li> 
- <li><i>Release branches?</i> - <tt>release/</tt></li> 
- <li><i>Hotfix branches?</i> - <tt>hotfix/</tt></li> 
- <li><i>Support branches?</i> - <tt>support/</tt></li> 
- <li><i>Version tag prefix?</i> - <tt>release-</tt></li> 
-</ul>
+<div class="section"> 
+ <h2 id="Access">Access</h2> 
+ <a name="Access"></a> 
+ <p>The following is a link to the continuous integration system used by the project:</p> 
+ <div class="source"> 
+  <pre><a class="externalLink" href="https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent">https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent</a></pre> 
+ </div> 
+</div> 
+<div class="section"> 
+ <h2 id="Notifiers">Notifiers</h2> 
+ <a name="Notifiers"></a> 
+ <p>No notifiers are defined. Please check back at a later date.</p> 
+</div>
 			</div>
 		</div>
 	</div>
@@ -192,33 +181,17 @@
 				</div>
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Modules</li>
+						<li class="nav-header">Parent Project</li>
 						<li >
-							<a href="parent-opensource/index.html" title="ChillDev Parent OpenSouece">ChillDev Parent OpenSouece</a>
+							<a href="../index.html" title="ChillDev Parent">ChillDev Parent</a>
 						</li>
 					</ul>
 				</div>
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Contribution guide</li>
-						<li class="active">
-							<a href="#" title="Git workflow">Git workflow</a>
-						</li>
-						<li class="nav-header">User guide</li>
+						<li class="nav-header">Guide</li>
 						<li >
-							<a href="guide/intro.html" title="Introduction">Introduction</a>
-						</li>
-						<li >
-							<a href="guide/properties.html" title="Properties">Properties</a>
-						</li>
-						<li >
-							<a href="guide/plugins.html" title="Build plugins">Build plugins</a>
-						</li>
-						<li >
-							<a href="guide/reports.html" title="Reporting plugins">Reporting plugins</a>
-						</li>
-						<li >
-							<a href="guide/dependencies.html" title="Dependencies">Dependencies</a>
+							<a href="guide/deploy.html" title="Deploy profile">Deploy profile</a>
 						</li>
 					</ul>
 				</div>
@@ -226,7 +199,45 @@
 					<ul class="nav nav-list">
 						<li class="nav-header">Project Documentation</li>
 						<li >
-							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-right"></i></a>
+							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
+							<ul class="nav nav-list">
+						<li class="active">
+							<a href="#" title="Continuous Integration">Continuous Integration</a>
+						</li>
+						<li >
+							<a href="dependencies.html" title="Dependencies">Dependencies</a>
+						</li>
+						<li >
+							<a href="dependency-info.html" title="Dependency Information">Dependency Information</a>
+						</li>
+						<li >
+							<a href="distribution-management.html" title="Distribution Management">Distribution Management</a>
+						</li>
+						<li >
+							<a href="index.html" title="About">About</a>
+						</li>
+						<li >
+							<a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a>
+						</li>
+						<li >
+							<a href="license.html" title="Project License">Project License</a>
+						</li>
+						<li >
+							<a href="plugin-management.html" title="Plugin Management">Plugin Management</a>
+						</li>
+						<li >
+							<a href="plugins.html" title="Project Plugins">Project Plugins</a>
+						</li>
+						<li >
+							<a href="team-list.html" title="Project Team">Project Team</a>
+						</li>
+						<li >
+							<a href="source-repository.html" title="Source Repository">Source Repository</a>
+						</li>
+						<li >
+							<a href="project-summary.html" title="Project Summary">Project Summary</a>
+						</li>
+							</ul>
 						</li>
 						<li >
 							<a href="project-reports.html" title="Project Reports">Project Reports <i class="icon-chevron-right"></i></a>
