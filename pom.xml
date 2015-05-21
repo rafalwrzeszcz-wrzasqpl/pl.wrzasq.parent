@@ -488,7 +488,7 @@
                         <version>0.10</version>
                         <inherited>false</inherited>
                         <configuration>
-                            <message>${project.version} API doc.</message>
+                            <message>${project.version} ${project.artifactId} doc.</message>
                             <noJekyll>true</noJekyll>
                             <server>github</server>
                         </configuration>
@@ -520,4 +520,9 @@
             </build>
         </profile>
     </profiles>
+
+    <!-- components of ChillDev-Parent project -->
+    <modules>
+        <module>parent-opensource</module>
+    </modules>
 </project>
