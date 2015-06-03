@@ -38,7 +38,7 @@ Checkstyle report is run using `com.puppycrawl.tools:checkstyle` version `6.5`, 
 
 ## `org.apache.maven.plugins:maven-compiler-plugin`
 
-Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 7** version right now.
+Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 8** version right now.
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 
