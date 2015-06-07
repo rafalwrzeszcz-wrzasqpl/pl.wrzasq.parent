@@ -11,3 +11,5 @@ It's pointless to define any common dependencies, every project has own, very de
 
 -   `junit:junit`
 -   `org.mockito:mockito-core`
+-   `org.springframework:spring-test`
+-   `org.springframework.security:spring-security-test`
