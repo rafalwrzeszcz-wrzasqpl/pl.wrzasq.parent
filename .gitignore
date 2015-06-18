@@ -5,7 +5,12 @@
 # @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
 ##
 
+/.classpath
 /.project
 /.settings
 /target
+
+/parent-opensource/.classpath
+/parent-opensource/.project
+/parent-opensource/.settings
 /parent-opensource/target
