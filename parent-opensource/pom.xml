@@ -14,7 +14,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- core project settings -->
-    <groupId>pl.chilldev.parent</groupId>
     <artifactId>parent-opensource</artifactId>
     <packaging>pom</packaging>
     <parent>
