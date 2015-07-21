@@ -108,7 +108,7 @@
                 <plugin>
                     <groupId>com.alexecollins.docker</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>2.9.2</version>
+                    <version>2.9.3</version>
                     <executions>
                         <execution>
                             <goals>
@@ -150,7 +150,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>2.4.1</version>
                     <configuration>
 <!-- TODO: breaks logback
                         <minimizeJar>true</minimizeJar>
@@ -217,9 +217,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.15</version>
+                <version>2.16</version>
                 <dependencies>
-                    <!-- Maven Checkstyle plugin has a 6.1.1 version by default which is buggy -->
+                    <!-- Maven Checkstyle plugin has a 6.2 version by default which is buggy -->
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
@@ -280,7 +280,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.4</version>
+                <version>3.5</version>
                 <executions>
                     <execution>
                         <goals>
@@ -426,7 +426,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.15</version>
+                <version>2.16</version>
                 <configuration>
                     <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
                     <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
@@ -452,7 +452,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.4</version>
+                <version>3.5</version>
             </plugin>
 
             <plugin>
