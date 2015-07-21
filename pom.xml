@@ -218,14 +218,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.16</version>
-                <dependencies>
-                    <!-- Maven Checkstyle plugin has a 6.2 version by default which is buggy -->
-                    <dependency>
-                        <groupId>com.puppycrawl.tools</groupId>
-                        <artifactId>checkstyle</artifactId>
-                        <version>6.5</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
                     <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
