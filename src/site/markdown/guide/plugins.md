@@ -42,7 +42,7 @@ Java compilation is done with all possible linting restrictions (`-Xlint:all` co
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 
-Resources are configured to be processed with `\` escape character (when filtered). Initially resources are configured to be located at `src/main/resources` and set for filtering.
+Resources are configured to be processed with `\` escape character (when filtered). Initially resources are configured to be located at `src/main/resources` and set for filtering. Additionally `src/main/resources-binary` directory is defined to be used as-it-is - these resources won't be filtered.
 
 ## `org.apache.maven.plugins:maven-site-plugin`
 
