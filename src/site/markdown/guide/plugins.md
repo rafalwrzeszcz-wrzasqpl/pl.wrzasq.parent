@@ -10,27 +10,29 @@
 Following build plugins are defined in POM structure - all of them are included in active plugins set (automatically inherited):
 
 -   `org.apache.maven.plugins:maven-checkstyle-plugin`
--   `org.apache.maven.plugins:maven-compiler-plugin`
 -   `org.apache.maven.plugins:maven-dependency-plugin`
--   `org.apache.maven.plugins:maven-deploy-plugin`
--   `org.apache.maven.plugins:maven-install-plugin`
 -   `org.apache.maven.plugins:maven-javadoc-plugin`
 -   `org.apache.maven.plugins:maven-pmd-plugin`
 -   `org.apache.maven.plugins:maven-project-info-reports-plugin`
--   `org.apache.maven.plugins:maven-resources-plugin`
--   `org.apache.maven.plugins:maven-site-plugin`
 -   `org.apache.maven.plugins:maven-source-plugin`
 -   `org.codehaus.mojo:findbugs-maven-plugin`
 -   `org.eluder.coveralls:coveralls-maven-plugin`
 -   `org.jacoco:jacoco-maven-plugin`
 
-Additionally following plugins are defined in management section, so they are not automatically executed in your build, but you can enable them by including them in your project:
+Additionally following plugins are defined in management section, so they are not automatically executed in your build, but you can enable them by including them in your project (or are executed by default by **Maven** and only versions and configurations are overridden):
 
 -   `com.alexecollins.docker:docker-maven-plugin`
 -   `com.github.eirslett:frontend-maven-plugin`
 -   `org.apache.maven.plugins:maven-archetype-plugin`
+-   `org.apache.maven.plugins:maven-clean-plugin`
+-   `org.apache.maven.plugins:maven-compiler-plugin`
+-   `org.apache.maven.plugins:maven-deploy-plugin`
+-   `org.apache.maven.plugins:maven-install-plugin`
 -   `org.apache.maven.plugins:maven-jar-plugin`
+-   `org.apache.maven.plugins:maven-resources-plugin`
 -   `org.apache.maven.plugins:maven-shade-plugin`
+-   `org.apache.maven.plugins:maven-site-plugin`
+-   `org.apache.maves.plugins:maven-surefire-plugin`
 -   `org.apache.maven.plugins:maven-war-plugin`
 -   `org.apache.tomcat.maven:tomcat7-maven-plugin`
 

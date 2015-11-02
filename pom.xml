@@ -145,6 +145,37 @@
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <compilerArgs>
+                            <arg>-Xlint:all</arg>
+                        </compilerArgs>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>2.6</version>
                     <configuration>
@@ -168,6 +199,23 @@
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.7</version>
+                    <dependencies>
+                        <!-- it's for fixing maven-resources-plugin 2.7 MRESOURCES-190 -->
+                        <dependency>
+                            <groupId>org.codehaus.plexus</groupId>
+                            <artifactId>plexus-utils</artifactId>
+                            <version>2.1</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <escapeString>\</escapeString>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
                     <version>2.4.2</version>
                     <configuration>
@@ -184,6 +232,37 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.4</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>lt.velykis.maven.skins</groupId>
+                            <artifactId>reflow-velocity-tools</artifactId>
+                            <version>1.1.1</version>
+                        </dependency>
+
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-module-markdown</artifactId>
+                            <version>1.6</version>
+                        </dependency>
+
+                        <dependency>
+                            <groupId>org.apache.velocity</groupId>
+                            <artifactId>velocity</artifactId>
+                            <version>1.7</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.19</version>
                 </plugin>
 
                 <plugin>
@@ -234,19 +313,6 @@
 
         <plugins>
             <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.5.201505241946</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.17</version>
@@ -261,19 +327,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <compilerArgs>
-                        <arg>-Xlint:all</arg>
-                    </compilerArgs>
-                </configuration>
             </plugin>
 
             <plugin>
@@ -297,18 +350,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
             </plugin>
 
             <plugin>
@@ -369,55 +410,6 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.7</version>
-                <dependencies>
-                    <!-- it's for fixing maven-resources-plugin 2.7 MRESOURCES-190 -->
-                    <dependency>
-                        <groupId>org.codehaus.plexus</groupId>
-                        <artifactId>plexus-utils</artifactId>
-                        <version>2.1</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <escapeString>\</escapeString>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>resources</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.4</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>lt.velykis.maven.skins</groupId>
-                        <artifactId>reflow-velocity-tools</artifactId>
-                        <version>1.1.1</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.apache.maven.doxia</groupId>
-                        <artifactId>doxia-module-markdown</artifactId>
-                        <version>1.6</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.apache.velocity</groupId>
-                        <artifactId>velocity</artifactId>
-                        <version>1.7</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.4</version>
                 <executions>
@@ -451,6 +443,19 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.0.0</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.5.201505241946</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
 
         <resources>
@@ -469,12 +474,6 @@
     <!-- reporting plugins -->
     <reporting>
         <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.5.201505241946</version>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -499,12 +498,27 @@
                     <show>private</show>
                     <excludePackageNames>test.*</excludePackageNames>
                 </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>javadoc-no-fork</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.5</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>aggregate</report>
+                            <report>jxr</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
 
             <plugin>
@@ -526,6 +540,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>2.19</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report-only</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
 
             <plugin>
@@ -536,6 +557,12 @@
                     <effort>Max</effort>
                     <threshold>Low</threshold>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.5.201505241946</version>
             </plugin>
         </plugins>
     </reporting>
