@@ -10,11 +10,14 @@
 Following reporting plugins are defined in POM structure:
 
 -   `org.apache.maven.plugins:maven-checkstyle-plugin`
+-   `org.apache.maven.plugins:maven-dependency-plugin`
 -   `org.apache.maven.plugins:maven-javadoc-plugin`
 -   `org.apache.maven.plugins:maven-jxr-plugin`
 -   `org.apache.maven.plugins:maven-pmd-plugin`
 -   `org.apache.maven.plugins:maven-project-info-reports-plugin`
 -   `org.apache.maven.plugins:maven-surefire-report-plugin`
+-   `org.codehaus.mojo:findbugs-maven-plugin`
+-   `org.jacoco:jacoco-maven-plugin`
 
 All of them are included in active plugins set (automatically inherited). Some of them are configured in specific way:
 
@@ -29,10 +32,6 @@ JavaDoc report includes API documentation of entire project (including private m
 ## `org.apache.maven.plugins:maven-project-info-reports-plugin`
 
 To speed up report generation, info report contains no dependencies repository location.
-
-## `org.codehaus.mojo:cobertura-maven-plugin`
-
-Code coverate is generated in **HTML** (for site) an **XML** formats - **XML** can be used for tools integration, for example for **Coveralls**.
 
 ## `org.codehaus.mojo:findbugs-maven-plugin`
 

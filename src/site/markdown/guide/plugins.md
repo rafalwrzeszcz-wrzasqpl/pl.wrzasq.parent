@@ -11,19 +11,23 @@ Following build plugins are defined in POM structure - all of them are included 
 
 -   `org.apache.maven.plugins:maven-checkstyle-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
+-   `org.apache.maven.plugins:maven-dependency-plugin`
 -   `org.apache.maven.plugins:maven-deploy-plugin`
 -   `org.apache.maven.plugins:maven-install-plugin`
 -   `org.apache.maven.plugins:maven-javadoc-plugin`
 -   `org.apache.maven.plugins:maven-pmd-plugin`
+-   `org.apache.maven.plugins:maven-project-info-reports-plugin`
 -   `org.apache.maven.plugins:maven-resources-plugin`
 -   `org.apache.maven.plugins:maven-site-plugin`
 -   `org.apache.maven.plugins:maven-source-plugin`
 -   `org.codehaus.mojo:findbugs-maven-plugin`
 -   `org.eluder.coveralls:coveralls-maven-plugin`
+-   `org.jacoco:jacoco-maven-plugin`
 
 Additionally following plugins are defined in management section, so they are not automatically executed in your build, but you can enable them by including them in your project:
 
 -   `com.alexecollins.docker:docker-maven-plugin`
+-   `com.github.eirslett:frontend-maven-plugin`
 -   `org.apache.maven.plugins:maven-archetype-plugin`
 -   `org.apache.maven.plugins:maven-jar-plugin`
 -   `org.apache.maven.plugins:maven-shade-plugin`
@@ -32,13 +36,19 @@ Additionally following plugins are defined in management section, so they are no
 
 Some of them are configured in specific way:
 
-## `org.apache.maven.plugins:maven-checkstyle-plugin`
-
-Checkstyle report is run using `com.puppycrawl.tools:checkstyle` version `6.5`, because `6.1.1` (included by default with current plugin version) is bugged. Project needs to define ruleset in main project, at path `src/main/checkstyle/checkstyle.xml`. `${checkstyle.project.basedir}` can be used to refer to current project directory.
-
 ## `org.apache.maven.plugins:maven-compiler-plugin`
 
 Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 8** version right now.
+
+## `org.apache.maven.plugins:maven-dependency-plugin`
+
+Dependency plugin is configured to ignore common test-scope dependencies that may not be used by all projects:
+
+-   `junit:junit`
+-   `org.mockito:mockito-core`
+-   `org.slf4j:slf4j-nop`
+-   `org.springframework:spring-test`
+-   `org.springframework.security:spring-security-test`
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 
@@ -65,6 +75,14 @@ Coveralls plugin is not bound to any phase by default, but it can be used from c
 ## `com.alexecollins.docker:docker-maven-plugin`
 
 Generates **Docker** image in `package` phase.
+
+## `com.github.eirslett:frontend-maven-plugin`
+
+Uses **Node** version `4.1.1` and **npm** version `3.3.4` and executes three stages:
+
+-   `install-node-and-npm`, which installs local version of **Node** and **npm**;
+-   `npm`, which installs build toold defined in `package.json` file (**npm** packages);
+-   `gulp`, which builds frontend assets (runs **Gulp**) - everything else should be handled in `gulpfile.js`.
 
 ## `org.apache.maven.plugins:maven-jar-plugin`
 
