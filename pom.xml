@@ -607,8 +607,7 @@
                     <plugin>
                         <groupId>com.github.github</groupId>
                         <artifactId>site-maven-plugin</artifactId>
-                        <!-- TODO: 0.11 causes Error 400 -->
-                        <version>0.10</version>
+                        <version>0.12</version>
                         <inherited>false</inherited>
                         <configuration>
                             <message>${project.version} ${project.artifactId} doc.</message>
