@@ -29,33 +29,38 @@
     <description>More detailed bootstrap with additional setup for open source projects.</description>
     <inceptionYear>2015</inceptionYear>
 
+    <!-- plugins configuration -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <path>${project.artifactId}/</path>
+                    <merge>true</merge>
+                    <message>${project.version} ${project.artifactId} API doc.</message>
+                    <noJekyll>true</noJekyll>
+                    <server>github</server>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>site-deploy</phase>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <!-- build profiles -->
     <profiles>
         <profile>
             <id>deploy</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>com.github.github</groupId>
-                        <artifactId>site-maven-plugin</artifactId>
-                        <version>0.12</version>
-                        <configuration>
-                            <path>${project.artifactId}/</path>
-                            <merge>true</merge>
-                            <message>${project.version} ${project.artifactId} API doc.</message>
-                            <noJekyll>true</noJekyll>
-                            <server>github</server>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>site-deploy</phase>
-                                <goals>
-                                    <goal>site</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>

@@ -317,6 +317,26 @@
 
         <plugins>
             <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <inherited>false</inherited>
+                <configuration>
+                    <message>${project.version} ${project.artifactId} doc.</message>
+                    <noJekyll>true</noJekyll>
+                    <server>github</server>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>site-deploy</phase>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.17</version>
@@ -608,26 +628,6 @@
             <id>deploy</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>com.github.github</groupId>
-                        <artifactId>site-maven-plugin</artifactId>
-                        <version>0.12</version>
-                        <inherited>false</inherited>
-                        <configuration>
-                            <message>${project.version} ${project.artifactId} doc.</message>
-                            <noJekyll>true</noJekyll>
-                            <server>github</server>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>site-deploy</phase>
-                                <goals>
-                                    <goal>site</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
