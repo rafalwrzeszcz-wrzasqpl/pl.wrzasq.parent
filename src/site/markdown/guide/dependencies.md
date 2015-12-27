@@ -11,5 +11,8 @@ It's pointless to define any common dependencies, every project has own, very de
 
 -   `junit:junit`
 -   `org.mockito:mockito-core`
+-   `org.powermock:powermock-api-mockito`
+-   `org.powermock:powermock-core`
+-   `org.powermock:powermock-module-junit4`
 -   `org.springframework:spring-test`
 -   `org.springframework.security:spring-security-test`

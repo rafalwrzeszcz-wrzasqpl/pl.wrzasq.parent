@@ -48,6 +48,9 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 
 -   `junit:junit`
 -   `org.mockito:mockito-core`
+-   `org.powermock:powermock-api-mockito`
+-   `org.powermock:powermock-core`
+-   `org.powermock:powermock-module-junit4`
 -   `org.slf4j:slf4j-nop`
 -   `org.springframework:spring-test`
 -   `org.springframework.security:spring-security-test`
