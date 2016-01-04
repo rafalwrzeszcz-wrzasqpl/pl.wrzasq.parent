@@ -3,7 +3,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -381,6 +381,7 @@
                         <ignoredDependency>junit:junit::</ignoredDependency>
                         <ignoredDependency>org.mockito:mockito-core::</ignoredDependency>
                         <ignoredDependency>org.powermock:powermock-api-mockito::</ignoredDependency>
+                        <ignoredDependency>org.powermock:powermock-core::</ignoredDependency>
                         <ignoredDependency>org.powermock:powermock-module-junit4::</ignoredDependency>
                         <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
                         <ignoredDependency>org.springframework:spring-test::</ignoredDependency>
