@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Build plugins
@@ -35,6 +35,7 @@ Additionally following plugins are defined in management section, so they are no
 -   `org.apache.maves.plugins:maven-surefire-plugin`
 -   `org.apache.maven.plugins:maven-war-plugin`
 -   `org.apache.tomcat.maven:tomcat7-maven-plugin`
+-   `org.vafer:jdeb`
 
 Some of them are configured in specific way:
 
@@ -96,6 +97,8 @@ Generates **JAR** artifact with manifest containing project meta data.
 ## `org.apache.maven.plugins:maven-shade-plugin`
 
 Generates **JAR** artifact including all dependencies in one package, named with suffix `-standalone`, which is possible to run directly, without any additional class-path packages.
+
+Also it's by default configured to merge all `META-INF/services/*` files and `META-INF/spring.handlers` and `META-INF/spring.schemas`.
 
 ## `org.apache.maven.plugins:maven-war-plugin`
 
