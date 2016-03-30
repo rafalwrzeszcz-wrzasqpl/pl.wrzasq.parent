@@ -2,15 +2,17 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
 ##
 
-/.classpath
-/.project
-/.settings
-/target
+# Eclipse IDE files
+/**/.classpath
+/**/.project
+/**/.settings
 
-/parent-opensource/.classpath
-/parent-opensource/.project
-/parent-opensource/.settings
-/parent-opensource/target
+# IntelliJ IDE files
+/.idea
+/**/*.iml
+
+# project builds
+/**/target
