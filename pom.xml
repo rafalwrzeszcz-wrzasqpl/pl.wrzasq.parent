@@ -103,6 +103,8 @@
 
     <!-- plugins configuration -->
     <build>
+        <sourceDirectory>target/generated-sources/delombok</sourceDirectory>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -383,6 +385,9 @@
                 <configuration>
                     <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
                     <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
+                    <sourceDirectories>
+                        <sourceDirectory>src/main/java</sourceDirectory>
+                    </sourceDirectories>
                 </configuration>
                 <executions>
                     <execution>
@@ -405,6 +410,7 @@
                         <ignoredDependency>org.powermock:powermock-api-mockito::</ignoredDependency>
                         <ignoredDependency>org.powermock:powermock-core::</ignoredDependency>
                         <ignoredDependency>org.powermock:powermock-module-junit4::</ignoredDependency>
+                        <ignoredDependency>org.projectlombok:lombok::</ignoredDependency>
                         <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
                         <ignoredDependency>org.springframework:spring-test::</ignoredDependency>
                         <ignoredDependency>org.springframework.security:spring-security-test::</ignoredDependency>
@@ -523,6 +529,27 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+                <version>1.16.8.0</version>
+                <configuration>
+                    <addOutputDirectory>false</addOutputDirectory>
+                    <sourceDirectory>src/main/java</sourceDirectory>
+                    <formatPreferences>
+                        <javaLangAsFQN>skip</javaLangAsFQN>
+                    </formatPreferences>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>delombok</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
 
         <resources>
@@ -548,6 +575,9 @@
                 <configuration>
                     <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
                     <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
+                    <sourceDirectories>
+                        <sourceDirectory>src/main/java</sourceDirectory>
+                    </sourceDirectories>
                 </configuration>
             </plugin>
 
@@ -636,6 +666,13 @@
 
     <!-- project dependencies -->
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
