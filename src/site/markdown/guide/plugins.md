@@ -18,6 +18,7 @@ Following build plugins are defined in POM structure - all of them are included 
 -   `org.codehaus.mojo:findbugs-maven-plugin`
 -   `org.eluder.coveralls:coveralls-maven-plugin`
 -   `org.jacoco:jacoco-maven-plugin`
+-   `org.projectlombok:lombok-maven-plugin`
 
 Additionally following plugins are defined in management section, so they are not automatically executed in your build, but you can enable them by including them in your project (or are executed by default by **Maven** and only versions and configurations are overridden):
 
@@ -52,6 +53,7 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 -   `org.powermock:powermock-api-mockito`
 -   `org.powermock:powermock-core`
 -   `org.powermock:powermock-module-junit4`
+-   `org.projectlombok:lombok`
 -   `org.slf4j:slf4j-nop`
 -   `org.springframework:spring-test`
 -   `org.springframework.security:spring-security-test`

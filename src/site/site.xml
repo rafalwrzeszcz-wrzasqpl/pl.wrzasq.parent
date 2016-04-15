@@ -71,6 +71,7 @@
             <item name="Build plugins" href="guide/plugins.html"/>
             <item name="Reporting plugins" href="guide/reports.html"/>
             <item name="Dependencies" href="guide/dependencies.html"/>
+            <item name="Lombok" href="guide/lombok.html"/>
         </menu>
 
         <menu ref="reports"/>
