@@ -365,7 +365,7 @@
                 <version>2.17</version>
                 <configuration>
                     <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
-                    <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
+                    <propertyExpansion>checkstyle.project.basedir=${basedir}</propertyExpansion>
                     <sourceDirectories>
                         <sourceDirectory>src/main/java</sourceDirectory>
                     </sourceDirectories>
