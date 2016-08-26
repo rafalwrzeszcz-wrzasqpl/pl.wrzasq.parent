@@ -17,7 +17,7 @@
     <groupId>pl.chilldev.parent</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
 
     <!-- project meta info -->
     <name>ChillDev Parent</name>
@@ -223,6 +223,25 @@
                         <addDefaultExcludes>false</addDefaultExcludes>
                         <escapeString>\</escapeString>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.9.5</version>
+                    <configuration>
+                        <tag>release-${project.version}</tag>
+                        <connectionType>developerConnection</connectionType>
+                        <message>Release ${project.version} tagged.</message>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>tag</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <plugin>
@@ -692,20 +711,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-scm-plugin</artifactId>
-                        <version>1.9.5</version>
-                        <configuration>
-                            <tag>release-${project.version}</tag>
-                            <connectionType>developerConnection</connectionType>
-                            <message>Release ${project.version} tagged.</message>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>tag</goal>
-                                </goals>
-                            </execution>
-                        </executions>
+                        <inherited>false</inherited>
                     </plugin>
                 </plugins>
             </build>
