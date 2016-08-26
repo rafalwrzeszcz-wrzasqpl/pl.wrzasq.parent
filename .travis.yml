@@ -14,11 +14,42 @@ sudo: false
 jdk:
     - "oraclejdk8"
 
-install: true
+env:
+    global:
+        -
+            secure: "OH0YTNrGHaacnFkpkfr0LvXdWfT03qxJj2VZU6kKldEjKwTtUyfLWSheczNxhQoNwU5Zr6sDvk2n7czByv376aNRmJKSc5aotDEg7Aj1T7ESSQaWK5vmkOyjDacpET3I6Ex/2cE2hr6/gMSWCJJU8ol3mPTQIZtm2LRu1wqNv7dETrGZ3fcyMMkI5qCjWRzJDg4SbJDcQG6jsHFKgykrJYNfB2u43w5BkBZ9qDLExhiar8FCoE58HuPXLIkt7dFRisUH9bENK/VuyVqIOlzqPrCrEpXVuc77aODcAtf8Cob2WvF9n8CDEA86NZIKwKDp3om8hS51/ze4Yc18ISjJS1Y+CXI4IeEE56J0hibzdKai7ZwHndb1xOEvYGO5pskbn7TxkM9DSDiqbGCnyX5dAm3ZjN+3QPDQJ22qKWKA0GMfbBKvjK/LFbWM4L0rl06Nyci94Z44qmAG7Lb0xS26W8DCaytmtqG9QTToO3wjAXMYXgdPCAjrmb7rsHs9TFWmdcF3X7NAFSD1yBk3YL593MeKgl6k9ibLNKUaIXaaZ/iG431LZWdY23lmSnpzPkqgjRH1OXdRsUkRUgSgR93TvBs7/m5oRRhLjeddo0zNjUNWARU5d0C93MB2IwTE1abFqHnp5VikVAbih1eBW1rJitSPjSQb/KeAdQpiS1lvz1k="
+        -
+            secure: "pv3R+/0lj/uEl4+NyWyXfpjC9PHIcAFZ54a1wURyt3B52YKlJnL/Zyi1O/6uSUb+rip0yQQzzCWeJMPHgvRuEJTEccGliSjnCJGHcUy7PNZjbAk4pn3fREsp1zJjgU6/2BLf7EbYK1VeKSsplOwoOlWe43jrRhz80Q5qyvTwVixYM2A4T+y5+7MB6Cd4jhE5oxBRKemmlZB2aZ0EuXMSt1DOW4wIjsga2GC3S9Fu+cTpCo9+5CGIFebjgRhwUzSSLWu1nvwUSqJ9bB7A89E5Cg9/gV7TPFNs60K7uBG9hQLT2IQd6IaYH6oM/7sQVWcUl5L6UR8p9VaXs1Yi18fc4nJrfvWgAL3Sw9ecA9bUq8oy+rrLheFH3oG0w3LbKFCVerlNbyBIN88lS8EZ75DyNLWcifhkLKP9wmH8+WRb7OzM6HEbLD7Mhrj7USCfXyrQiRslOCbQy9d8NqpZ11TZgX4VFWpLA5Q4dcp0trtQhZ+U146YwwJGc/uCLSPhgID4VAGrxxBDk5NLp2l+SVYCopv5wmMBqOCX5IXdZwb6qruvpgsI5qRy6gKtujVRmhF09PqeHAjQ5BTTqHHOIPSdwFp/EtbI5FizWOCvzaNYcF8iALnUYu41kO+8atyDX+uvJll95PXRJxBaRC5zPUJQg+Y+bbvAOdvaKf6RZ78ktO4="
+        -
+            secure: "keSRFNpvloXsBYLfkit2c/AoYIe+yYwXHSqYVXX3WQbLJIg9u8YXY0+v5s1gILZLevY/IIR6tKDoE8gRBBAMHx/fwdnn1PraUm2ZlJWg0nxZPW2gpXRmWPo5EPqt0zltkhk4h9KzsIX9gUZdZY57xwfV8cmHv2sqV78Mdx5XrAYf4ZpMzsn9oQCG0XJbwV/qOkHML2euYRdpiUIAN0RN/+XFYCEQ7X3kf3S9jYIGUq71nTqxxwAxwUcqXYJ3/PnTmm4YnZUDd7NjSQmkU7G2peSwudeDlzJ4TGzo7nwX4pyfq0dLKhOTlPUIXR7kTGhmuai0SkJiL/8XmZBGfbVx8tZzID28QVN8lVn/hmPYpTObdLTJG4waV1MDtABElsW7AMHeibosoSOcnIj2Hekh44G+hM81SohVbWOQBD0x397wd9k9qdWIeio2VC+mOkjNflB382k5DOPgCGz0QPFmnsdiQQmRPhwR6ZYvCWrVIRG9buw9gvHgoQo++ysUVrpaXjjvVleqJCJTQ6+YCfvy1EvEDtEuCx69dvbRtjb5eGU5Q6uTFlODMmjODoVsPJKdMe7VCSjIUNF2dca3QNOphPVlQw3t8qc+VWQEXxg11gD36eZBMUnPqmKGYGU00iFDxPHEytNTuL58VgpFavdftsB8g/fMSNDNNv+1KdTc2VQ="
+        -
+            secure: "gewkyltd+Hdvt3OzZaE2hQ4E9m/k0ZP0b8rIfH1pJgeeDMzQly+pzUsoO2MTAddb4tXec/J+EZQAxzIj06sLnhQfome6iS5P6QPPKwNjCzXftZ4t4YOLrRqawXaYPgNvMrzPRx/sFYg4qXEExs99z/oPz2nkcnnaQxGQrlox5SoKlpnmUIeixpLGsp3PdQn9iqIzrW53nRkfWKT/bjcjU7Ebvjb6Qh/0Qa8sUyWOo2K4ycZUDoJrT1h8RIGeS3NjrQs55VBHwEwn64sHDQGF3GN4a4lpMpjTutyvCutY2uVisOKXOYoj8sVrsUgEkt9IFKZC7E5E8M+u2988A2DNpbCDkkCqBcKQd7QQLfY9bD9P1LZar8kQlaPpQ/s+L3Eybrw4AJecFMw+cd01dNpO98oSh1G0QwIJbKtmNCmMumAe6kuK8cdAxbCt2b9eUtBlMpTf0VsTObWiDjLapUpPJ8nY7NVP0hoIJtMGAOaCwQuiIUY8ctD4VyeRwH+iYgZmYu7N25aEaCh4ke29gcM18/CsUmYyTG4zW6XvbmmOaCYDroVajNqsz5zHCnh5rWx4HxEhxVvcALSwg41umUiu5qOIsx/pbUl6e1ZtSMx+PvErsSacdhb+FAD5fwlnZ4SnUVYdzeJNLCKySd28q3aAT++7nnYuwZuSMblHoZZVvu0="
+        -
+            secure: "gWwjDlDUQYKFev59logF/MTLIUU1tBzCwD24DhGHtm2dXA8TGDNwhmcQ8RxUG6UPRkAXhDOt5cnOMR3m1CfRldOt76CokZPX8ksRn+g3f9+vgQ5lyjVYOfXD8x3/18ZN06JYoz8mgO2fPJFFobg2GER+sFXKybgsvj/Mdo3cSWACQDtj5ci7Q7FIXFxdurhAvjD4Y9OXOnbRWbvEHufo9n+tlAoonVPyN95AMjTxroSjTzr9iuBHzkF4/vhrHoGNHt1MYTq1bZv4ohycgP8/Hc+G/GU1/vNDMc1PyVfMKPq6yVDqHeTg+jCWUnsC4UHcN28Srk6dQYKEw6LssSJw+qBPxQK2BVTUoEomX6lIbfsfn4tMsMisl8N8icwZYYPoxEEZBhBeUbcpMu36zpmSicPV1eyeJOMTRrsNCGuGftzKlSArwbqT8M4Pdh4GZ2sdPnzlGHgatS42zg060HR02O4wbYkLQWsMzwH1cj905Ay4S2akVWe3Q5lMyFew1VssnR2NzM8hzRUsRe8HU+cf9DGRzUBospNPZjj4UisqyTHXKGOV9EaqZn9m64UyO7YLa4QYA8idAZPRq6EkgeYbl+UNwRSNyFU8QOmxqZ41t8Kc2OPv73Qy06+BF+aco2bPdAeHvl8WmxWrm8asM59GeXCCL9TR1RNNCITCJItdYsg="
+
+# this is not a boolean, this is a Linux `true` command to simply override this step
+install: "true"
 
 script: "mvn verify site"
 
 after_script: "mvn coveralls:report"
+
+before_deploy:
+    - "eval \"$(ssh-agent -s)\""
+    - "git config user.name \"Travis CI\""
+    - "git config user.email \"office@chilldev.pl\""
+    - "openssl aes-256-cbc -k \"$SECRET\" -in .travis/gpg_key.enc -out .travis/gpg_key -d"
+    - "openssl aes-256-cbc -k \"$SECRET\" -in .travis/id_rsa.enc -out .travis/id_rsa -d"
+    - "gpg --fast-import .travis/gpg_key"
+    - "chmod 600 .travis/id_rsa"
+    - "ssh-add .travis/id_rsa"
+
+deploy:
+    provider: "script"
+    script: "mvn deploy site-deploy -P deploy --settings .travis/settings.xml"
+    on:
+        branch: "master"
+        jdk: "oraclejdk8"
 
 cache:
     directories:
