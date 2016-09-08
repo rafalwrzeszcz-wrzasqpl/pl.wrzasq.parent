@@ -56,8 +56,7 @@ cache:
     directories:
         - "$HOME/.m2/"
 
-before_cache:
-    - "rm -rf $HOME/.m2/repository/pl/chilldev/parent"
+before_cache: "rm -rf $HOME/.m2/repository/pl/chilldev/parent"
 
 notifications:
     webhooks:
