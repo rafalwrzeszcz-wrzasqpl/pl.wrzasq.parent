@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # `deploy` profile
@@ -13,7 +13,7 @@ In addition to main POM, for open source projects `pl.chilldev.parent:parent-ope
 
 ### `com.github.github:site-maven-plugin`
 
-Bound to phase `site`, builds (and commits) project site to **GitHub** repository, `gh-pages` branch, which effectively publishes site.
+Bound to phase `site-deploy`, builds (and commits) project site to **GitHub** repository, `gh-pages` branch, which effectively publishes site.
 
 ### `org.apache.maven.plugins:maven-gpg-plugin`
 

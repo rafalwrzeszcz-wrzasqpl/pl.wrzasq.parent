@@ -24,6 +24,7 @@ Additionally following plugins are defined in management section, so they are no
 
 -   `com.alexecollins.docker:docker-maven-plugin`
 -   `com.github.eirslett:frontend-maven-plugin`
+-   `com.versioneye:versioneye-maven-plugin`
 -   `org.apache.maven.plugins:maven-archetype-plugin`
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
@@ -57,6 +58,10 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 -   `org.slf4j:slf4j-nop`
 -   `org.springframework:spring-test`
 -   `org.springframework.security:spring-security-test`
+
+## `com.versioneye:versioneye-maven-plugin`
+
+**VersionEye** plugin is configured to check licenses and security issues on `verify` phase.
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 
