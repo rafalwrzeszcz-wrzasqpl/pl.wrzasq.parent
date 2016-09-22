@@ -35,8 +35,6 @@ Additionally following plugins are defined in management section, so they are no
 -   `org.apache.maven.plugins:maven-shade-plugin`
 -   `org.apache.maven.plugins:maven-site-plugin`
 -   `org.apache.maves.plugins:maven-surefire-plugin`
--   `org.apache.maven.plugins:maven-war-plugin`
--   `org.apache.tomcat.maven:tomcat7-maven-plugin`
 -   `org.vafer:jdeb`
 
 Some of them are configured in specific way:
@@ -106,11 +104,3 @@ Generates **JAR** artifact with manifest containing project meta data.
 Generates **JAR** artifact including all dependencies in one package, named with suffix `-standalone`, which is possible to run directly, without any additional class-path packages.
 
 Also it's by default configured to merge all `META-INF/services/*` files and `META-INF/spring.handlers` and `META-INF/spring.schemas`.
-
-## `org.apache.maven.plugins:maven-war-plugin`
-
-Generates **WAR** artifact with manifest containing project meta data.
-
-## `org.apache.tomcat.maven:tomcat7-maven-plugin`
-
-Allows to run web application directly in **Tomcat 7** contianer, configured directly in root path. It does nothing out of the box, it just configures plugin that one can use from commnd line.
