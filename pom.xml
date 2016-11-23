@@ -400,9 +400,6 @@
                     <ignoredDependencies>
                         <ignoredDependency>junit:junit::</ignoredDependency>
                         <ignoredDependency>org.mockito:mockito-core::</ignoredDependency>
-                        <ignoredDependency>org.powermock:powermock-api-mockito::</ignoredDependency>
-                        <ignoredDependency>org.powermock:powermock-core::</ignoredDependency>
-                        <ignoredDependency>org.powermock:powermock-module-junit4::</ignoredDependency>
                         <ignoredDependency>org.projectlombok:lombok::</ignoredDependency>
                         <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
                         <ignoredDependency>org.springframework:spring-test::</ignoredDependency>
@@ -648,27 +645,6 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>2.2.21</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito2</artifactId>
-            <version>1.6.6</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-core</artifactId>
-            <version>1.6.6</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-module-junit4</artifactId>
-            <version>1.6.6</version>
             <scope>test</scope>
         </dependency>
 
