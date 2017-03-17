@@ -58,6 +58,26 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <path>${project.artifactId}/</path>
+                    <merge>true</merge>
+                    <server>github</server>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.versioneye</groupId>
+                <artifactId>versioneye-maven-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <projectId>555e1828634daa30fb000e94</projectId>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
