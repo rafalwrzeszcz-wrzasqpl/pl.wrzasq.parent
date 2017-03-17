@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Parent POM
@@ -28,3 +28,15 @@ To use it simply use `pl.chilldev.parent:parent` as parent of your project:
     <!-- your project definition here -->
 </project>
 ```
+
+## Project structure
+
+There are four parts of this project, however just two of them are important for end-projects:
+
+-   `parent-generic` is a generic **Java** project setup (that binds `parent` project plugins with `parent-checkstyle` ruleset);
+-   `parent-opensource` contains additional setup for **Chillout Development** open source projects.
+
+The other two parts are needed to provide shared **Checkstyle** ruleset and bind it together with released project:
+
+-   `parent` is a base project definition, but without code style checks (which require separate packaging to make it shared between external projects);
+-   `parent-checkstyle` is a packaged **Checkstyle** ruleset.

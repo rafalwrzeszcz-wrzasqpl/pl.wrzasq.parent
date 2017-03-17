@@ -2,14 +2,14 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Build plugins
 
 Following build plugins are defined in POM structure - all of them are included in active plugins set (automatically inherited):
 
--   `org.apache.maven.plugins:maven-checkstyle-plugin`
+-   `org.apache.maven.plugins:maven-checkstyle-plugin` (via `parent-generic`)
 -   `org.apache.maven.plugins:maven-dependency-plugin`
 -   `org.apache.maven.plugins:maven-javadoc-plugin`
 -   `org.apache.maven.plugins:maven-pmd-plugin`

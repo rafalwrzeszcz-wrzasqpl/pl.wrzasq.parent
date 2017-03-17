@@ -17,7 +17,7 @@
     <groupId>pl.chilldev.parent</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.2.2-SNAPSHOT</version>
+    <version>0.3.0-SNAPSHOT</version>
 
     <!-- project meta info -->
     <name>ChillDev Parent</name>
@@ -373,26 +373,6 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>
-                    <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
-                    <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
-                    <sourceDirectories>
-                        <sourceDirectory>src/main/java</sourceDirectory>
-                    </sourceDirectories>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
@@ -531,19 +511,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>
-                    <configLocation>src/main/checkstyle/checkstyle.xml</configLocation>
-                    <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
-                    <sourceDirectories>
-                        <sourceDirectory>src/main/java</sourceDirectory>
-                    </sourceDirectories>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
@@ -625,44 +592,6 @@
         </plugins>
     </reporting>
 
-    <!-- project dependencies -->
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.14</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>2.7.12</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>4.3.6.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <version>4.2.1.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
     <!-- build profiles -->
     <profiles>
         <profile>
@@ -687,6 +616,8 @@
 
     <!-- components of ChillDev-Parent project -->
     <modules>
+        <module>parent-checkstyle</module>
+        <module>parent-generic</module>
         <module>parent-opensource</module>
     </modules>
 </project>

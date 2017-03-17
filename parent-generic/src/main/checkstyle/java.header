@@ -5,4 +5,4 @@
 ^ \* @copyright \d{4}[0-9, -]* © by Rafał Wrzeszcz - Wrzasq\.pl\.$
 ^ \*/$
 
-^package pl\.chilldev\.parent(\..+)?;$
+^package pl\.chilldev\.parent\.generic(\..+)?;$

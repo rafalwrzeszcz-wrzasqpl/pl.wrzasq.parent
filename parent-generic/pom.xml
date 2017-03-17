@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# This file is part of the ChillDev-Parent.
+#
+# @license http://mit-license.org/ The MIT license
+# @copyright 2015 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+-->
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd
+">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- core project settings -->
+    <artifactId>parent-generic</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>pl.chilldev.parent</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.3.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <!-- project meta info -->
+    <name>ChillDev Parent Generic</name>
+    <url>http://chilloutdevelopment.github.io/pl.chilldev.parent/parent-generic</url>
+    <description>Generic bootstrap for Java projects.</description>
+    <inceptionYear>2017</inceptionYear>
+
+    <!-- plugins configuration -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                    <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
+                    <sourceDirectories>
+                        <sourceDirectory>src/main/java</sourceDirectory>
+                    </sourceDirectories>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>${project.groupId}</groupId>
+                        <artifactId>parent-checkstyle</artifactId>
+                        <version>${project.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- reporting plugins -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                    <propertyExpansion>checkstyle.project.basedir=${project.basedir}</propertyExpansion>
+                    <sourceDirectories>
+                        <sourceDirectory>src/main/java</sourceDirectory>
+                    </sourceDirectories>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- project dependencies -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.7.17</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.3.7.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <version>4.2.2.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- build profiles -->
+    <profiles>
+        <profile>
+            <id>deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <inherited>false</inherited>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

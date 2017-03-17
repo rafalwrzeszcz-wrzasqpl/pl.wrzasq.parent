@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # ChillDev-Parent
@@ -34,7 +34,7 @@ To use it in your project, simply define `pl.chilldev.parent:parent` as your pro
     <version>${version}</version>
     <parent>
         <groupId>pl.chilldev.parent</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>parent-generic</artifactId>
         <version>${pl.chilldev.parent.version}</version>
     </parent>
 </project>
