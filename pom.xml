@@ -99,6 +99,10 @@
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <site>
+            <id>github</id>
+            <url>git:ssh://git@github.com/chilloutdevelopment/pl.chilldev.parent.git?gh-pages#</url>
+        </site>
     </distributionManagement>
 
     <!-- plugins configuration -->
@@ -115,24 +119,6 @@
                         <execution>
                             <goals>
                                 <goal>package</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
-                    <groupId>com.github.github</groupId>
-                    <artifactId>site-maven-plugin</artifactId>
-                    <version>0.12</version>
-                    <configuration>
-                        <message>${project.version} ${project.artifactId} doc.</message>
-                        <noJekyll>true</noJekyll>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <phase>site-deploy</phase>
-                            <goals>
-                                <goal>site</goal>
                             </goals>
                         </execution>
                     </executions>
@@ -323,9 +309,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.6</version>
-                    <configuration>
-                        <skipDeploy>true</skipDeploy>
-                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>net.trajano.wagon</groupId>
+                            <artifactId>wagon-git</artifactId>
+                            <version>2.0.4</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
 
                 <plugin>
@@ -353,15 +343,6 @@
         </pluginManagement>
 
         <plugins>
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <inherited>false</inherited>
-                <configuration>
-                    <server>github</server>
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>com.versioneye</groupId>
                 <artifactId>versioneye-maven-plugin</artifactId>

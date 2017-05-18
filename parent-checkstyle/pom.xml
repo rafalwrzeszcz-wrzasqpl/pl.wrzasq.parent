@@ -33,16 +33,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <configuration>
-                    <path>${project.artifactId}/</path>
-                    <merge>true</merge>
-                    <server>github</server>
-                </configuration>
-            </plugin>
-
-            <plugin>
                 <groupId>com.versioneye</groupId>
                 <artifactId>versioneye-maven-plugin</artifactId>
                 <inherited>false</inherited>
