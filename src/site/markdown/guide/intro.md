@@ -22,7 +22,7 @@ To use it simply use `pl.chilldev.parent:parent` as parent of your project:
     <parent>
         <groupId>pl.chilldev.parent</groupId>
         <artifactId>parent-opensource</artifactId>
-        <version>0.0.1</version>
+        <version>{put-latest-version-here}</version>
     </parent>
 
     <!-- your project definition here -->

@@ -69,11 +69,10 @@ Resources are configured to be processed with `\` escape character (when filtere
 
 Site plugin is configured to work with additional dependencies:
 
--   `lt.velykis.maven.skins:reflow-velocity-tools`
+-   `net.trajano.wagon:wagon-git`
 -   `org.apache.maven.doxia:doxia-module-markdown`
--   `org.apache.velocity:velocity`
 
-It allows for using **Markdown** format in your documentation and for using `lt.velykis.maven.skins:reflow-maven-skin` skin.
+It allows for using **Markdown** format in your documentation and publishing site to Git SCM. We picked this generic approach over using dedicated GitHub plugin `com.github.github:site-maven-plugin`, because it uses GitHub API which heavily limits upload rate (too took ~20 minutes to upload small module page).
 
 ## `org.codehaus.mojo:findbugs-maven-plugin`
 
@@ -104,3 +103,5 @@ Generates **JAR** artifact with manifest containing project meta data.
 Generates **JAR** artifact including all dependencies in one package, named with suffix `-standalone`, which is possible to run directly, without any additional class-path packages.
 
 Also it's by default configured to merge all `META-INF/services/*` files and `META-INF/spring.handlers` and `META-INF/spring.schemas`.
+
+Additionally it excludes all `META-INF/*.SF`, `META-INF/*.DSA` and `META-INF/*.RSA` files they would foul Java when reading consolidated archive.
