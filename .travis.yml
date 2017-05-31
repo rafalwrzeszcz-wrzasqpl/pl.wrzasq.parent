@@ -29,6 +29,14 @@ env:
         -
             secure: "HLE7G7iSVXC8Cti2RPbdcETzlxKSKoa9kCPZUXfh/7YB7QTpJlkVOccjLPsu/iEyL1zEAoLzE8RM1RlFSL16vhEyoqHQMDlP0yIu3GHDwNwYJkRbF6kd3mHoI4XxZMXsZkmgrMxBBHYpCIB/Ca+bJYV1Pkk3C2Iyb4dbWBsp1Cf382oBUgKxxN4q489PLtKlKRM3StmndqA9V6nqH8lgkA219vHwx4xXAmCsBO3aqygnXPA2ng/gcbwTvKUKVxWMpiXKRMStz3nnzMDloANbf9WyqxMfFNX32M4qHPu+SjJSJ61d/pwad1NqcmIRsnATDxhdwDtu3Q8tiWX3AJKYHCvKgzMQoI4mYxemY8UXrOrNMOe0ZAODMd3v047kd7f7bcIBSJgn8U6KGQea4QlezOKIDATGtM35rmftSS1t9e/tUiA1NCAkWtDQgq32joEzwEsdg/8pTnANIIDKX/mpNY+P2mRk9FzC8tLm4OWNKyexmTqv/ABQN3kuOUjqN27n6DzkVfRfJCChAybeYvuSYUwOLQzYn9OcW2AaFVNc7ZsH23XFMY41uiWvHa8Lyk+emdLGpVWBBeP0jrQK9rPhkFbqFaN7BPREp/I/HTyw8E5h4l0g/fyCo4HoxFQPIey6G2eQW7eaJxuva6jIeE9AoneyZWBaEBgyJhf2m0oN2M8="
 
+#TODO: this is just to prevent failing build with old Maven version
+before_install:
+    - "wget http://apache.mirror.rafal.ca/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"
+    - "tar xzvf apache-maven-3.3.9-bin.tar.gz"
+    - "export M2_HOME=`pwd`/apache-maven-3.3.9"
+    - "export M2=$M2_HOME/bin"
+    - "export PATH=$M2:$PATH"
+
 # this is not a boolean, this is a Linux `true` command to simply override this step
 install: "true"
 
