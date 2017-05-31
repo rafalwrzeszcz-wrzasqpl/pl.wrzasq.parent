@@ -35,7 +35,6 @@ Additionally following plugins are defined in management section, so they are no
 -   `org.apache.maven.plugins:maven-shade-plugin`
 -   `org.apache.maven.plugins:maven-site-plugin`
 -   `org.apache.maves.plugins:maven-surefire-plugin`
--   `org.vafer:jdeb`
 
 Some of them are configured in specific way:
 
