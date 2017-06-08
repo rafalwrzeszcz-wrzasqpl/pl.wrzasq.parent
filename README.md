@@ -42,11 +42,11 @@ To use it in your project, simply define `pl.chilldev.parent:parent` as your pro
 
 # Resources
 
--   [GitHub page with API documentation](http://chilloutdevelopment.github.io/pl.chilldev.parent)
+-   [GitHub page with API documentation](https://chilloutdevelopment.github.io/pl.chilldev.parent)
 -   [Issues tracker](https://github.com/chilloutdevelopment/pl.chilldev.parent/issues)
--   [Maven packages](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22pl.chilldev.parent%22)
+-   [Maven packages](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22pl.chilldev.parent%22)
 -   [Chillout Development @ GitHub](https://github.com/chilloutdevelopment)
--   [Chillout Development @ Facebook](http://www.facebook.com/chilldev)
+-   [Chillout Development @ Facebook](https://www.facebook.com/chilldev)
 
 # Contributing
 
@@ -56,8 +56,8 @@ This project is published under [MIT license](https://github.com/chilloutdevelop
 
 # Authors
 
-**pl.chilldev.parent** is brought to you by [Chillout Development](http://chilldev.pl).
+**pl.chilldev.parent** is brought to you by [Chillout Development](https://chilldev.pl).
 
 List of contributors:
 
--   [Rafał "Wrzasq" Wrzeszcz](https://github.com/rafalwrzeszcz) ([wrzasq.pl](http://wrzasq.pl)).
+-   [Rafał "Wrzasq" Wrzeszcz](https://github.com/rafalwrzeszcz) ([wrzasq.pl](https://wrzasq.pl)).
