@@ -43,18 +43,15 @@ To use it in your project, simply define `pl.chilldev.parent:parent` as your pro
 # Resources
 
 -   [GitHub page with API documentation](https://chilloutdevelopment.github.io/pl.chilldev.parent)
+-   [Contribution guide](https://github.com/chilloutdevelopment/pl.chilldev.parent/blob/develop/CONTRIBUTING.md)
 -   [Issues tracker](https://github.com/chilloutdevelopment/pl.chilldev.parent/issues)
 -   [Maven packages](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22pl.chilldev.parent%22)
 -   [Chillout Development @ GitHub](https://github.com/chilloutdevelopment)
 -   [Chillout Development @ Facebook](https://www.facebook.com/chilldev)
 
-# Contributing
-
-Do you want to help improving this project? Simply *fork* it and post a pull request. You can do everything on your own, you don't need to ask if you can, just do all the awesome things you want!
+# Authors
 
 This project is published under [MIT license](https://github.com/chilloutdevelopment/pl.chilldev.parent/tree/master/LICENSE).
-
-# Authors
 
 **pl.chilldev.parent** is brought to you by [Chillout Development](https://chilldev.pl).
 
