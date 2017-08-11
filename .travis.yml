@@ -97,7 +97,7 @@ deploy:
         provider: "script"
         skip_cleanup: true
         # unfortunately deploy script must be single command
-        script: >
+        script: |
             set -xe
             mvn versions:set versions:commit -DremoveSnapshot=true
             git add -u
