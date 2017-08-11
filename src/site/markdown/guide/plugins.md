@@ -15,6 +15,7 @@ Following build plugins are defined in POM structure - all of them are included 
 -   `org.apache.maven.plugins:maven-pmd-plugin`
 -   `org.apache.maven.plugins:maven-project-info-reports-plugin`
 -   `org.apache.maven.plugins:maven-source-plugin`
+-   `org.codehaus.mojo:build-helper-maven-plugin`
 -   `org.codehaus.mojo:findbugs-maven-plugin`
 -   `org.eluder.coveralls:coveralls-maven-plugin`
 -   `org.jacoco:jacoco-maven-plugin`
@@ -35,6 +36,7 @@ Additionally following plugins are defined in management section, so they are no
 -   `org.apache.maven.plugins:maven-shade-plugin`
 -   `org.apache.maven.plugins:maven-site-plugin`
 -   `org.apache.maves.plugins:maven-surefire-plugin`
+-   `org.codehaus.mojo:versions-maven-plugin`
 
 Some of them are configured in specific way:
 
@@ -72,6 +74,10 @@ Site plugin is configured to work with additional dependencies:
 -   `org.apache.maven.doxia:doxia-module-markdown`
 
 It allows for using **Markdown** format in your documentation and publishing site to Git SCM. We picked this generic approach over using dedicated GitHub plugin `com.github.github:site-maven-plugin`, because it uses GitHub API which heavily limits upload rate (too took ~20 minutes to upload small module page).
+
+## `org.codehaus.mojo:build-helper-maven-plugin`
+
+Build helper plugin exposes version components as a series of properties with prefix `semver.`.
 
 ## `org.codehaus.mojo:findbugs-maven-plugin`
 

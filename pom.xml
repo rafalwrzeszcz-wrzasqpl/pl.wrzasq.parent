@@ -127,7 +127,7 @@
                 <plugin>
                     <groupId>com.github.eirslett</groupId>
                     <artifactId>frontend-maven-plugin</artifactId>
-                    <version>1.4</version>
+                    <version>1.5</version>
                     <configuration>
                         <nodeVersion>v7.7.1</nodeVersion>
                         <npmVersion>4.3.0</npmVersion>
@@ -172,7 +172,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.6.2</version>
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>
@@ -336,6 +336,12 @@
                         <trimStackTrace>false</trimStackTrace>
                     </configuration>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
             </plugins>
         </pluginManagement>
 
@@ -408,6 +414,22 @@
                     <execution>
                         <goals>
                             <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <propertyPrefix>semver</propertyPrefix>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>parse-version</goal>
                         </goals>
                     </execution>
                 </executions>
