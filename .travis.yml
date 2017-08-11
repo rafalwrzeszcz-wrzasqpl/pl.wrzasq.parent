@@ -81,32 +81,32 @@ script: "mvn verify site"
 
 after_script: "mvn coveralls:report"
 
-before_deploy: |
-    eval "$(ssh-agent -s)"
-    git config user.name "Travis CI"
-    git config user.email "office@chilldev.pl"
-    openssl aes-256-cbc -k "${SECRET}" -in .travis/gpg_key.enc -out .travis/gpg_key -d
-    openssl aes-256-cbc -k "${SECRET}" -in .travis/id_rsa.enc -out .travis/id_rsa -d
-    gpg --fast-import .travis/gpg_key
-    chmod 600 .travis/id_rsa
-    ssh-add .travis/id_rsa
-    echo -e "Host github.com\n    StrictHostKeyChecking no\n" >> ~/.ssh/config
+before_deploy:
+    - "eval \"$(ssh-agent -s)\""
+    - "git config user.name \"Travis CI\""
+    - "git config user.email \"office@chilldev.pl\""
+    - "openssl aes-256-cbc -k \"$SECRET\" -in .travis/gpg_key.enc -out .travis/gpg_key -d"
+    - "openssl aes-256-cbc -k \"$SECRET\" -in .travis/id_rsa.enc -out .travis/id_rsa -d"
+    - "gpg --fast-import .travis/gpg_key"
+    - "chmod 600 .travis/id_rsa"
+    - "ssh-add .travis/id_rsa"
+    - "echo -e \"Host github.com\\n    StrictHostKeyChecking no\\n\" >> ~/.ssh/config"
 
 deploy:
     -
         provider: "script"
         skip_cleanup: true
-        script: |
-            mvn versions:set versions:commit -DremoveSnapshot=true
-            git add -u
-            git commit -m "Automated release release."
-            git push origin ${TRAVIS_BRANCH}:master
-            mvn versions:set versions:commit \
-                -DnewVersion="\${semver.majorVersion}.\${semver.minorVersion}.\${semver.nextIncrementalVersion}" \
-                -DnextSnapshot=true
-            git add -u
-            git commit -m "[skip ci] New version bump."
-            git push
+        script:
+            - "mvn versions:set versions:commit -DremoveSnapshot=true"
+            - "git add -u"
+            - "git commit -m \"Automated release release.\""
+            - "git push origin ${TRAVIS_BRANCH}:master"
+            - "mvn versions:set versions:commit \
+                -DnewVersion=\"\${semver.majorVersion}.\${semver.minorVersion}.\${semver.nextIncrementalVersion}\" \
+                -DnextSnapshot=true"
+            - "git add -u"
+            - "git commit -m "\[skip ci] New version bump.\""
+            - "git push"
         on:
             branch: "develop"
             condition: "${TRAVIS_EVENT_TYPE} == push"
