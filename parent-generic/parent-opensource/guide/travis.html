@@ -156,7 +156,7 @@
 # @copyright 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
 --><h1>Travis-based deployment pipeline</h1>
 <p><b>Note:</b> This page plays role mostly of the internal guideline for <b>Chillout Development</b> projects, but it&#x2019;s entirely general and you can re-use the same flow with your own projects.</p>
-<p><b>Note:</b> <b>VersionEye</b> plugin is not part of the deployment pipeline, just a regular build plugin, but as it requires configuration through encironment variable it&#x2019;s included here.</p>
+<p><b>Note:</b> <b>VersionEye</b> plugin is not part of the deployment pipeline, just a regular build plugin, but as it requires configuration through environment variable it&#x2019;s included here.</p>
 <div class="section">
 <h2><a name="Concept"></a>Concept</h2>
 <div class="section">
@@ -186,20 +186,8 @@
 <h3><a name="Approach"></a>Approach</h3>
 <p>The flow is as follows - when the release is about to happend, it has to be prepared on <tt>master</tt> branch (the contnet of the repository should reflect the desired release state), all versions must be set (preferable with <tt>mvn versions:set</tt> plugin call) to desired value (must not contain <tt>-SNAPSHOT</tt> suffix). Such prepared commit goes to <tt>master</tt> branch and after pushing to <b>GitHub</b> repository it triggers the build on <b>Travis</b> which involves deployment cycle.</p>
 <p><b>Note:</b> Commits to master should be done only when the stable release is meant to happen with the release version set in <tt>pom.xml</tt> file.</p>
-<p><b>Note:</b> We decided to rely on <tt>master</tt> branch instead of a tag, as tag creation can be easily automated and as we have <tt>develop</tt> branch following <b>Gitflow</b>, we can still easily separate stable deployments from development process. Additionally having tagging as part of deployment process can prevent us from creating tags when the build doesn&#x2019;t succeed.</p>
-<p>This is the ready snippet to prepare the release commit of current version:</p>
-
-<div class="source">
-<div class="source"><pre class="prettyprint">export CURRENT_VERSION=`mvn -q -Dexec.executable=&quot;echo&quot; -Dexec.args='-n ${project.version}' --non-recursive org.codehaus.mojo:exec-maven-plugin:1.3.1:exec | sed s/'-SNAPSHOT'//g`
-mvn versions:set -DnewVersion=${CURRENT_VERSION}
-mvn versions:commit
-git add -u
-git commit -m &quot;${CURRENT_VERSION} release.&quot;
-git checkout master
-git merge develop
-# here you can also prepare develop branch for next version to push it all together
-git push
-</pre></div></div></div></div>
+<p><b>Note:</b> We decided to rely on <tt>master</tt> branch instead of a tag, as tag creation can be easily automated. Additionally having tagging as part of deployment process can prevent us from creating tags when the build doesn&#x2019;t succeed.</p>
+<p>As major and minor releases usually demand some manual changes it&#x2019;s release process need to be initialized manually. However for current active version (being stored on branch <tt>develop</tt>), each update automatically triggers a release version update with full deployment cycle.</p></div></div>
 <div class="section">
 <h2><a name="Setup"></a>Setup</h2>
 <p>As the deployment process relies on some sensitive data, like <b>Sonatype</b> credentials, <b>GitHub</b> token etc., to pass them safely into the build we use environment variables encoded with <b>Travis</b> repository key. To pass large blobs like keys, we ue additional secret string that we randomly generate on our own for each repository, store it encoded as well and use as a key to encrypt/decrypt files with <tt>openssl</tt>.</p>
@@ -290,7 +278,9 @@ travis encrypt SECRET=$SECRET
   
 <li><tt>.travis.yml</tt> - sections <tt>before_deploy</tt> to prepare required deployment environment and <tt>deploy</tt> for actual deployment command;</li>
   
-<li><tt>.travis/settings.xml</tt> - file that contains mapping of environment variables into <b>Maven</b> properties of the deployment configuration.</li>
+<li><tt>.travis/settings.xml</tt> - file that contains mapping of environment variables into <b>Maven</b> properties of the deployment configuration;</li>
+  
+<li><tt>.travis/release.sh</tt> - script containing CD pipeline logic as <b>Travis</b> doesn&#x2019;t support complex deployment scripts.</li>
 </ul></div></div>
                   </div>
             </div>
@@ -306,7 +296,7 @@ travis encrypt SECRET=$SECRET
             All rights reserved.    
                   <li id="publishDate" class="pull-right">Last Published: 2017-08-12</li>
               <li id="projectVersion" class="pull-right">
-                    Version: 0.4.2
+                    Version: 0.4.3
         </li>
             </p>
                 </div>
