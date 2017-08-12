@@ -97,17 +97,7 @@ deploy:
         provider: "script"
         skip_cleanup: true
         # unfortunately deploy script must be single command
-        script: |
-            mvn versions:set versions:commit -DremoveSnapshot=true
-            git add -u
-            git commit -m "Automated release release."
-            git push origin ${TRAVIS_BRANCH}:master"
-            mvn versions:set versions:commit \
-                -DnewVersion="\\${semver.majorVersion}.\\${semver.minorVersion}.\\${semver.nextIncrementalVersion}" \
-                -DnextSnapshot=true
-            git add -u
-            git commit -m "[skip ci] New version bump."
-            git push
+        script: "./.travis/release.sh ${TRAVIS_BRANCH}"
         on:
             branch: "develop"
             condition: "${TRAVIS_EVENT_TYPE} == push"
