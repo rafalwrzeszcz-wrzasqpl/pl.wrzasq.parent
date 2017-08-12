@@ -26,9 +26,8 @@ git commit -m "Automated release release."
 git push origin ${TRAVIS_BRANCH}:master
 
 # now create a new version commit
-mvn versions:set versions:commit \
-    -DnewVersion="\${semver.majorVersion}.\${semver.minorVersion}.\${semver.nextIncrementalVersion}" \
-    -DnextSnapshot=true
+mvn build-helper:parse-version versions:set versions:commit \
+    -DnewVersion="\${semver.majorVersion}.\${semver.minorVersion}.\${semver.nextIncrementalVersion}-SNAPSHOT"
 git add -u
 git commit -m "[skip ci] New version bump."
 git push origin ${TRAVIS_BRANCH}

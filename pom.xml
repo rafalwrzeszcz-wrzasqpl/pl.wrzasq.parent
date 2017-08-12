@@ -17,7 +17,7 @@
     <groupId>pl.chilldev.parent</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>${semver.majorVersion}.${semver.minorVersion}.${semver.nextIncrementalVersion}</version>
+    <version>0.4.1-SNAPSHOT</version>
 
     <!-- project meta info -->
     <name>ChillDev Parent</name>
