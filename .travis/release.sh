@@ -11,6 +11,13 @@ set -ex
 
 BRANCH="${1}"
 
+REPO=`git config remote.origin.url`
+SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+
+# change origin URL to SSH to allow uploading with SSH key
+git remote rm origin
+git remote add orogin ${SSH_REPO}
+
 # make sure HEAD points to the branch
 git checkout ${BRANCH}
 
