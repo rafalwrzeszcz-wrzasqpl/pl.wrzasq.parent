@@ -101,7 +101,7 @@
         </snapshotRepository>
         <site>
             <id>github</id>
-            <url>git:ssh://git@github.com/chilloutdevelopment/pl.chilldev.parent.git?gh-pages#</url>
+            <url>github:http://chilloutdevelopment.github.io/pl.chilldev.parent/</url>
         </site>
     </distributionManagement>
 

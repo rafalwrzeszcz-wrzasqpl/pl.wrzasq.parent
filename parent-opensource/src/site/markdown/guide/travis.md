@@ -9,7 +9,7 @@
 
 **Note:** This page plays role mostly of the internal guideline for **Chillout Development** projects, but it's entirely general and you can re-use the same flow with your own projects.
 
-**Note:** **VersionEye** plugin is not part of the deployment pipeline, just a regular build plugin, but as it requires configuration through encironment variable it's included here.
+**Note:** **VersionEye** plugin is not part of the deployment pipeline, just a regular build plugin, but as it requires configuration through environment variable it's included here.
 
 ## Concept
 
@@ -33,21 +33,9 @@ The flow is as follows - when the release is about to happend, it has to be prep
 
 **Note:** Commits to master should be done only when the stable release is meant to happen with the release version set in `pom.xml` file.
 
-**Note:** We decided to rely on `master` branch instead of a tag, as tag creation can be easily automated and as we have `develop` branch following **Gitflow**, we can still easily separate stable deployments from development process. Additionally having tagging as part of deployment process can prevent us from creating tags when the build doesn't succeed.
+**Note:** We decided to rely on `master` branch instead of a tag, as tag creation can be easily automated. Additionally having tagging as part of deployment process can prevent us from creating tags when the build doesn't succeed.
 
-This is the ready snippet to prepare the release commit of current version:
-
-```bash
-export CURRENT_VERSION=`mvn -q -Dexec.executable="echo" -Dexec.args='-n ${project.version}' --non-recursive org.codehaus.mojo:exec-maven-plugin:1.3.1:exec | sed s/'-SNAPSHOT'//g`
-mvn versions:set -DnewVersion=${CURRENT_VERSION}
-mvn versions:commit
-git add -u
-git commit -m "${CURRENT_VERSION} release."
-git checkout master
-git merge develop
-# here you can also prepare develop branch for next version to push it all together
-git push
-```
+As major and minor releases usually demand some manual changes it's release process need to be initialized manually. However for current active version (being stored on branch `develop`), each update automatically triggers a release version update with full deployment cycle.
 
 ## Setup
 
@@ -137,4 +125,5 @@ env:
 To bind the described setup with **Travis** build cycle you will need two files - there is no point in describing them here as the description may most likely go outdated and miss the real requirements, so the best way is to just look into this repository examples and use them as a templates:
 
 -   `.travis.yml` - sections `before_deploy` to prepare required deployment environment and `deploy` for actual deployment command;
--   `.travis/settings.xml` - file that contains mapping of environment variables into **Maven** properties of the deployment configuration.
+-   `.travis/settings.xml` - file that contains mapping of environment variables into **Maven** properties of the deployment configuration;
+-   `.travis/release.sh` - script containing CD pipeline logic as **Travis** doesn't support complex deployment scripts.
