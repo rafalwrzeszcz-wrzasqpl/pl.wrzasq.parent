@@ -27,7 +27,7 @@ git push origin ${TRAVIS_BRANCH}:master
 
 # now create a new version commit
 mvn versions:set versions:commit \
-    -DnewVersion="\${semver.majorVersion}.\${semver.minorVersion}.\${semver.nextIncrementalVersion}"
+    -DnewVersion="\${semver.majorVersion}.\${semver.minorVersion}.\${semver.nextIncrementalVersion}" \
     -DnextSnapshot=true
 git add -u
 git commit -m "[skip ci] New version bump."
