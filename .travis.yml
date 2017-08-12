@@ -97,7 +97,7 @@ deploy:
         provider: "script"
         skip_cleanup: true
         # unfortunately deploy script must be single command
-        script: "./.travis/release.sh ${TRAVIS_BRANCH}"
+        script: "./.travis/release.sh"
         on:
             branch: "develop"
             condition: "${TRAVIS_EVENT_TYPE} == push"
