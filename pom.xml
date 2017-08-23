@@ -438,7 +438,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.4</version>
+                <version>3.0.5</version>
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
@@ -474,7 +474,7 @@
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
-                <version>1.16.18.0</version>
+                <version>1.16.18.1</version>
                 <configuration>
                     <addOutputDirectory>false</addOutputDirectory>
                     <sourceDirectory>src/main/java</sourceDirectory>
@@ -577,7 +577,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.4</version>
+                <version>3.0.5</version>
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
