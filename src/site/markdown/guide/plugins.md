@@ -11,6 +11,7 @@ Following build plugins are defined in POM structure - all of them are included 
 
 -   `org.apache.maven.plugins:maven-checkstyle-plugin` (via `parent-generic`)
 -   `org.apache.maven.plugins:maven-dependency-plugin`
+-   `org.apache.maven.plugins:maven-enforcer-plugin`
 -   `org.apache.maven.plugins:maven-javadoc-plugin`
 -   `org.apache.maven.plugins:maven-pmd-plugin`
 -   `org.apache.maven.plugins:maven-project-info-reports-plugin`
@@ -25,7 +26,6 @@ Additionally following plugins are defined in management section, so they are no
 
 -   `com.alexecollins.docker:docker-maven-plugin`
 -   `com.github.eirslett:frontend-maven-plugin`
--   `com.versioneye:versioneye-maven-plugin`
 -   `org.apache.maven.plugins:maven-archetype-plugin`
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
@@ -58,9 +58,9 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 -   `org.springframework:spring-test`
 -   `org.springframework.security:spring-security-test`
 
-## `com.versioneye:versioneye-maven-plugin`
+## `org.apache.maven.plugins:maven-enforcer-plugin`
 
-**VersionEye** plugin is configured to check licenses and security issues on `verify` phase.
+Required **Maven** version is at least `3.3.9` and **Java** `1.8`.
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 

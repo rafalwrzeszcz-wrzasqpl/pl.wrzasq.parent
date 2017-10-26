@@ -29,20 +29,6 @@
     <description>Checkstyle rules.</description>
     <inceptionYear>2017</inceptionYear>
 
-    <!-- plugins configuration -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.versioneye</groupId>
-                <artifactId>versioneye-maven-plugin</artifactId>
-                <inherited>false</inherited>
-                <configuration>
-                    <projectId>5900e829710da2402c670683</projectId>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
     <!-- build profiles -->
     <profiles>
         <profile>

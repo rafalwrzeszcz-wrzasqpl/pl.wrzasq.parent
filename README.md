@@ -11,7 +11,6 @@
 
 [![Build Status](https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent.svg)](https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent)
 [![Coverage Status](https://coveralls.io/repos/chilloutdevelopment/pl.chilldev.parent/badge.png?branch=develop)](https://coveralls.io/r/chilloutdevelopment/pl.chilldev.parent)
-[![Dependency Status](https://www.versioneye.com/user/projects/555cb2e4634daa30fb00090e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/555cb2e4634daa30fb00090e)
 [![Known Vulnerabilities](https://snyk.io/test/github/chilloutdevelopment/pl.chilldev.parent/badge.svg)](https://snyk.io/test/github/chilloutdevelopment/pl.chilldev.parent)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/chilloutdevelopment/pl.chilldev.parent)
 

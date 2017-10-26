@@ -2,14 +2,12 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2016 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2016 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Travis-based deployment pipeline
 
 **Note:** This page plays role mostly of the internal guideline for **Chillout Development** projects, but it's entirely general and you can re-use the same flow with your own projects.
-
-**Note:** **VersionEye** plugin is not part of the deployment pipeline, just a regular build plugin, but as it requires configuration through environment variable it's included here.
 
 ## Concept
 
@@ -90,7 +88,6 @@ openssl aes-256-cbc -k "$SECRET" -in .travis/gpg_key -out .travis/gpg_key.enc
 
 To pass the short, or variable data into deployment builds we use encrypted environment variables. Following environment variables are used:
 
--   `VERSIONEYE_API_KEY` - **VersionEye** API key;
 -   `OSSRH_USERNAME` - **Sonatype** deployments accoung login;
 -   `OSSRH_PASSWORD` - **Sonatype** deployments accoung password;
 -   `GPG_PASSPHRASE` - password for **GPG** key;
@@ -100,7 +97,6 @@ To pass the short, or variable data into deployment builds we use encrypted envi
 To generate encrypted values for them call:
 
 ```bash
-travis encrypt VERSIONEYE_API_KEY=<VersionEye API key>
 travis encrypt OSSRH_USERNAME=<Sonatype account login>
 travis encrypt OSSRH_PASSWORD=<Sonatype account password>
 travis encrypt GPG_PASSPHRASE=<GPG key passphrase>

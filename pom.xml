@@ -144,20 +144,6 @@
                 </plugin>
 
                 <plugin>
-                    <groupId>com.versioneye</groupId>
-                    <artifactId>versioneye-maven-plugin</artifactId>
-                    <version>3.11.4</version>
-                    <executions>
-                        <execution>
-                            <phase>verify</phase>
-                            <goals>
-                                <goal>securityAndLicenseCheck</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-archetype-plugin</artifactId>
                     <version>3.0.1</version>
@@ -347,15 +333,6 @@
 
         <plugins>
             <plugin>
-                <groupId>com.versioneye</groupId>
-                <artifactId>versioneye-maven-plugin</artifactId>
-                <inherited>false</inherited>
-                <configuration>
-                    <projectId>555cb2e4634daa30fb00090e</projectId>
-                </configuration>
-            </plugin>
-
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.0.1</version>
@@ -374,6 +351,29 @@
                     <execution>
                         <goals>
                             <goal>analyze-only</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <rules>
+                        <requireJavaVersion>
+                            <version>1.8</version>
+                        </requireJavaVersion>
+                        <requireMavenVersion>
+                            <version>3.3.9</version>
+                        </requireMavenVersion>
+                    </rules>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce</goal>
                         </goals>
                     </execution>
                 </executions>
