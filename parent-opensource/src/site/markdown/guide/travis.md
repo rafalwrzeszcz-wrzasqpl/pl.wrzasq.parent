@@ -92,7 +92,7 @@ To pass the short, or variable data into deployment builds we use encrypted envi
 -   `OSSRH_PASSWORD` - **Sonatype** deployments accoung password;
 -   `GPG_PASSPHRASE` - password for **GPG** key;
 -   `GITHUB_TOKEN` - **GitHub** access token, used for deploying pages;
--   `SECRET` - our secret scring used for decrypting key files.
+-   `SECRET` - our secret string used for decrypting key files.
 
 To generate encrypted values for them call:
 
