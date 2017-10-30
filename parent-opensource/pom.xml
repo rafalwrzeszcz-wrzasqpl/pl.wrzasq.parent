@@ -19,7 +19,7 @@
     <parent>
         <groupId>pl.chilldev.parent</groupId>
         <artifactId>parent-generic</artifactId>
-        <version>0.4.11-SNAPSHOT</version>
+        <version>0.4.11</version>
         <relativePath>../parent-generic/</relativePath>
     </parent>
 
