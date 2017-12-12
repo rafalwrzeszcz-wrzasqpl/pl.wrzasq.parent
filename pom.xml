@@ -107,7 +107,7 @@
 
     <!-- plugins configuration -->
     <build>
-        <sourceDirectory>target/generated-sources/delombok</sourceDirectory>
+        <sourceDirectory>target/delombok</sourceDirectory>
 
         <pluginManagement>
             <plugins>
@@ -497,6 +497,7 @@
                 <configuration>
                     <addOutputDirectory>false</addOutputDirectory>
                     <sourceDirectory>src/main/java</sourceDirectory>
+                    <outputDirectory>${project.build.sourceDirectory}</outputDirectory>
                     <formatPreferences>
                         <javaLangAsFQN>skip</javaLangAsFQN>
                     </formatPreferences>
