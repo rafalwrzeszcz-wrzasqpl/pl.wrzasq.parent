@@ -48,11 +48,9 @@ Java compilation is done with all possible linting restrictions (`-Xlint:all` co
 
 Dependency plugin is configured to ignore common test-scope dependencies that may not be used by all projects:
 
+-   `com.github.stefanbirkner:system-rules`
 -   `junit:junit`
 -   `org.mockito:mockito-core`
--   `org.powermock:powermock-api-mockito`
--   `org.powermock:powermock-core`
--   `org.powermock:powermock-module-junit4`
 -   `org.projectlombok:lombok`
 -   `org.slf4j:slf4j-nop`
 -   `org.springframework:spring-test`
