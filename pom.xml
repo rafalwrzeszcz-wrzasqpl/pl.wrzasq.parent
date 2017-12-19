@@ -357,14 +357,6 @@
                 <version>3.0.2</version>
                 <configuration>
                     <failOnWarning>true</failOnWarning>
-                    <ignoredDependencies>
-                        <ignoredDependency>junit:junit::</ignoredDependency>
-                        <ignoredDependency>org.mockito:mockito-core::</ignoredDependency>
-                        <ignoredDependency>org.projectlombok:lombok::</ignoredDependency>
-                        <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
-                        <ignoredDependency>org.springframework:spring-test::</ignoredDependency>
-                        <ignoredDependency>org.springframework.security:spring-security-test::</ignoredDependency>
-                    </ignoredDependencies>
                 </configuration>
                 <executions>
                     <execution>

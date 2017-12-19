@@ -58,6 +58,22 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <ignoredDependencies>
+                        <ignoredDependency>com.github.stefanbirkner:system-rules::</ignoredDependency>
+                        <ignoredDependency>junit:junit::</ignoredDependency>
+                        <ignoredDependency>org.mockito:mockito-core::</ignoredDependency>
+                        <ignoredDependency>org.projectlombok:lombok::</ignoredDependency>
+                        <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
+                        <ignoredDependency>org.springframework:spring-test::</ignoredDependency>
+                        <ignoredDependency>org.springframework.security:spring-security-test::</ignoredDependency>
+                    </ignoredDependencies>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -86,6 +102,13 @@
             <artifactId>lombok</artifactId>
             <version>1.16.18</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.stefanbirkner</groupId>
+            <artifactId>system-rules</artifactId>
+            <version>1.17.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
