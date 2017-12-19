@@ -17,7 +17,7 @@
     <groupId>pl.chilldev.parent</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.4.18</version>
+    <version>0.4.19-SNAPSHOT</version>
 
     <!-- project meta info -->
     <name>ChillDev Parent</name>
