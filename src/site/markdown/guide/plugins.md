@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Build plugins
@@ -26,7 +26,6 @@ Additionally following plugins are defined in management section, so they are no
 
 -   `com.alexecollins.docker:docker-maven-plugin`
 -   `com.github.eirslett:frontend-maven-plugin`
--   `org.apache.maven.plugins:maven-archetype-plugin`
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
 -   `org.apache.maven.plugins:maven-deploy-plugin`
