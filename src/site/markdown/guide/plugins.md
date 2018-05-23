@@ -25,6 +25,7 @@ Following build plugins are defined in POM structure - all of them are included 
 Additionally following plugins are defined in management section, so they are not automatically executed in your build, but you can enable them by including them in your project (or are executed by default by **Maven** and only versions and configurations are overridden):
 
 -   `com.alexecollins.docker:docker-maven-plugin`
+-   `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
 -   `com.github.eirslett:frontend-maven-plugin`
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
@@ -88,9 +89,13 @@ Coveralls plugin is not bound to any phase by default, but it can be used from c
 
 Generates **Docker** image in `package` phase.
 
+## `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
+
+Executes `s3-upload` action during the `deploy` phase.
+
 ## `com.github.eirslett:frontend-maven-plugin`
 
-Uses **Node** version `4.1.1` and **npm** version `3.3.4` and executes three stages:
+Uses **Node** version `9.3.0` and **npm** version `5.6.0` and executes three stages:
 
 -   `install-node-and-npm`, which installs local version of **Node** and **npm**;
 -   `npm`, which installs build toold defined in `package.json` file (**npm** packages);
