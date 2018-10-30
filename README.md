@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015, 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017 - 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # ChillDev-Parent
@@ -45,7 +45,7 @@ To use it in your project, simply define `pl.chilldev.parent:parent` as your pro
 -   [GitHub page with API documentation](https://chilloutdevelopment.github.io/pl.chilldev.parent)
 -   [Contribution guide](https://github.com/chilloutdevelopment/pl.chilldev.parent/blob/develop/CONTRIBUTING.md)
 -   [Issues tracker](https://github.com/chilloutdevelopment/pl.chilldev.parent/issues)
--   [Maven packages](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22pl.chilldev.parent%22)
+-   [Maven packages](https://search.maven.org/search?q=g:pl.chilldev.parent)
 -   [Chillout Development @ GitHub](https://github.com/chilloutdevelopment)
 -   [Chillout Development @ Facebook](https://www.facebook.com/chilldev)
 

@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017 © by Rafal Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2018 © by Rafal Wrzeszcz - Wrzasq.pl.
 ##
 
 #FIXME: https://github.com/travis-ci/travis-ci/issues/753
@@ -21,6 +21,26 @@ jdk:
     - "openjdk8"
     - "oraclejdk8"
     - "oraclejdk9"
+    - "openjdk10"
+    - "openjdk11"
+    - "oraclejdk11"
+
+# TODO: temporary as delombok won't work here
+matrix:
+    include:
+        # TODO: this is needed for OpenJDK missing certificates
+        -
+            jdk: "openjdk10"
+            before_install:
+                - "rm ${JAVA_HOME}/lib/security/cacerts"
+                - "ln -s /etc/ssl/certs/java/cacerts ${JAVA_HOME}/lib/security/cacerts"
+    allow_failures:
+        -
+            jdk: "openjdk10"
+        -
+            jdk: "openjdk11"
+        -
+            jdk: "oraclejdk11"
 
 env:
     global:

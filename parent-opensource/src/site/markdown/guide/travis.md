@@ -2,7 +2,7 @@
 # This file is part of the ChillDev-Parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2016 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2016 - 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Travis-based deployment pipeline
@@ -14,7 +14,7 @@
 ### Principles
 
 -   When possible rely on **Maven**, rather than CI to avoid lock-in with particular CI solution.
--   Try to automate as much as possible, but no more.
+-   Try to automate as much as possible.
 
 ### Actions
 
