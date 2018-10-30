@@ -71,7 +71,7 @@ ssh-keygen -t rsa -b 4096 -C "Travis CI"
 -   Encrypt private key file:
 
 ```bash
-openssl aes-256-cbc -k "$SECRET" -in .travis/id_rsa -out .travis/id_rsa.enc
+openssl aes-256-cbc -md sha256 -k "$SECRET" -in .travis/id_rsa -out .travis/id_rsa.enc
 ```
 
 To export and encrypt **GPG** (the one associated with **Sonatype** account, for tutorial about generating the key itself use **Google**) do:
@@ -79,7 +79,7 @@ To export and encrypt **GPG** (the one associated with **Sonatype** account, for
 ```bash
 gpg -a --export deployer@account.com > .travis/gpg_key
 gpg -a --export-secret-keys deployer@account.com >> .travis/gpg_key
-openssl aes-256-cbc -k "$SECRET" -in .travis/gpg_key -out .travis/gpg_key.enc
+openssl aes-256-cbc -md sha256 -k "$SECRET" -in .travis/gpg_key -out .travis/gpg_key.enc
 ```
 
 **Note:** Never, ever commit unencrypted keys to the repositories (not even private onces)!
