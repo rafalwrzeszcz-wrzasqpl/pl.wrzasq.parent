@@ -637,6 +637,7 @@
     <modules>
         <module>parent-checkstyle</module>
         <module>parent-generic</module>
+        <module>parent-internal</module>
         <module>parent-opensource</module>
     </modules>
 </project>

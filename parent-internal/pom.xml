@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# This file is part of the ChillDev-Parent.
+#
+# @license http://mit-license.org/ The MIT license
+# @copyright 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
+-->
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd
+">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- core project settings -->
+    <artifactId>parent-internal</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>pl.chilldev.parent</groupId>
+        <artifactId>parent-generic</artifactId>
+        <version>0.6.3-SNAPSHOT</version>
+        <relativePath>../parent-generic/</relativePath>
+    </parent>
+
+    <!-- project meta info -->
+    <name>ChillDev Parent Internal</name>
+    <url>https://chilloutdevelopment.github.io/pl.chilldev.parent/parent-internal/</url>
+    <description>Our internal specific project setup defining interaction with common services used within organization.</description>
+    <inceptionYear>2018</inceptionYear>
+
+    <!-- S3 repository setup -->
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.zalando.org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.0.0.RELEASE-zal-2</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>aws-s3</id>
+            <url>s3://chilldev-repository/maven/release</url>
+        </repository>
+
+        <repository>
+            <id>aws-s3-snapshot</id>
+            <url>s3://chilldev-repository/maven/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <!-- build profiles -->
+    <profiles>
+        <profile>
+            <id>deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <inherited>false</inherited>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
