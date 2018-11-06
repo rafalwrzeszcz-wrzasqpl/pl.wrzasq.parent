@@ -555,7 +555,6 @@
                 <reportSets>
                     <reportSet>
                         <reports>
-                            <report>aggregate</report>
                             <report>jxr</report>
                         </reports>
                     </reportSet>
