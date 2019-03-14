@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2017, 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -17,15 +17,15 @@
     <artifactId>parent-opensource</artifactId>
     <packaging>pom</packaging>
     <parent>
-        <groupId>pl.chilldev.parent</groupId>
+        <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent-generic</artifactId>
-        <version>0.6.5-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../parent-generic/</relativePath>
     </parent>
 
     <!-- project meta info -->
-    <name>ChillDev Parent OpenSouece</name>
-    <url>https://chilloutdevelopment.github.io/pl.chilldev.parent/parent-opensource/</url>
+    <name>WrzasqPl Parent OpenSouece</name>
+    <url>https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent/parent-opensource/</url>
     <description>More detailed bootstrap with additional setup for open source projects.</description>
     <inceptionYear>2015</inceptionYear>
 

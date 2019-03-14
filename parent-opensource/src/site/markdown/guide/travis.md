@@ -1,13 +1,13 @@
 <!---
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2016 - 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2016 - 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Travis-based deployment pipeline
 
-**Note:** This page plays role mostly of the internal guideline for **Chillout Development** projects, but it's entirely general and you can re-use the same flow with your own projects.
+**Note:** This page plays role mostly of the internal guideline for **Rafał Wrzeszcz - Wrzasq.pl** projects, but it's entirely general and you can re-use the same flow with your own projects.
 
 ## Concept
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -14,14 +14,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- core project settings -->
-    <groupId>pl.chilldev.parent</groupId>
+    <groupId>pl.wrzasq.parent</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.6.5-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <!-- project meta info -->
-    <name>ChillDev Parent</name>
-    <url>https://chilloutdevelopment.github.io/pl.chilldev.parent</url>
+    <name>WrzasqPl Parent</name>
+    <url>https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent</url>
     <description>Generic bootstrap for all of the projects.</description>
     <inceptionYear>2015</inceptionYear>
     <properties>
@@ -42,12 +42,6 @@
         <name>Rafał Wrzeszcz - Wrzasq.pl</name>
         <url>https://wrzasq.pl/</url>
     </organization>
-<!-- POM can't have more then one
-    <organization>
-        <name>Chillout Development</name>
-        <url>https://chilldev.pl/</url>
-    </organization>
--->
 
     <!-- personal info -->
     <developers>
@@ -75,18 +69,18 @@
     <!-- development handling -->
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/chilloutdevelopment/pl.chilldev.parent/issues</url>
+        <url>https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Travis CI</system>
-        <url>https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent</url>
+        <url>https://travis-ci.org/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent</url>
     </ciManagement>
 
     <scm>
-        <connection>scm:git:https://github.com/chilloutdevelopment/pl.chilldev.parent.git</connection>
-        <developerConnection>scm:git:git@github.com:chilloutdevelopment/pl.chilldev.parent.git</developerConnection>
-        <url>https://github.com/chilloutdevelopment/pl.chilldev.parent</url>
+        <connection>scm:git:https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.git</connection>
+        <developerConnection>scm:git:git@github.com:rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.git</developerConnection>
+        <url>https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent</url>
     </scm>
 
     <!-- distribution handling -->
@@ -101,7 +95,7 @@
         </snapshotRepository>
         <site>
             <id>github</id>
-            <url>github:http://chilloutdevelopment.github.io/pl.chilldev.parent/</url>
+            <url>github:http://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent/</url>
         </site>
     </distributionManagement>
 
@@ -232,10 +226,10 @@
                                 <url>${project.url}</url>
                                 <Specification-Title>${project.name}</Specification-Title>
                                 <Specification-Version>${project.version}</Specification-Version>
-                                <Specification-Vendor>Rafał Wrzeszcz - Wrzasq.pl; Chillout Development</Specification-Vendor>
+                                <Specification-Vendor>Rafał Wrzeszcz - Wrzasq.pl</Specification-Vendor>
                                 <Implementation-Title>${project.name}</Implementation-Title>
                                 <Implementation-Version>${project.version}</Implementation-Version>
-                                <Implementation-Vendor>Rafał Wrzeszcz - Wrzasq.pl; Chillout Development</Implementation-Vendor>
+                                <Implementation-Vendor>Rafał Wrzeszcz - Wrzasq.pl</Implementation-Vendor>
                             </manifestEntries>
                         </archive>
                     </configuration>
@@ -632,7 +626,7 @@
         </profile>
     </profiles>
 
-    <!-- components of ChillDev-Parent project -->
+    <!-- components of WrzasqPl-Parent project -->
     <modules>
         <module>parent-checkstyle</module>
         <module>parent-generic</module>

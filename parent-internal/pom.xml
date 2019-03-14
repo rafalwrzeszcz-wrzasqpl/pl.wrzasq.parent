@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2018 - 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -17,15 +17,15 @@
     <artifactId>parent-internal</artifactId>
     <packaging>pom</packaging>
     <parent>
-        <groupId>pl.chilldev.parent</groupId>
+        <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent-generic</artifactId>
-        <version>0.6.5-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../parent-generic/</relativePath>
     </parent>
 
     <!-- project meta info -->
-    <name>ChillDev Parent Internal</name>
-    <url>https://chilloutdevelopment.github.io/pl.chilldev.parent/parent-internal/</url>
+    <name>WrzasqPl Parent Internal</name>
+    <url>https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent/parent-internal/</url>
     <description>Our internal specific project setup defining interaction with common services used within organization.</description>
     <inceptionYear>2018</inceptionYear>
 

@@ -1,22 +1,22 @@
 <!---
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015, 2017 - 2018 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017 - 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
-# ChillDev-Parent
+# WrzasqPl-Parent
 
-**ChillDev-Parent** is a generic bootstrap project structure that we use in all our projects (both open source, internal and commerial).
+**WrzasqPl-Parent** is a generic bootstrap project structure that we use in all our projects (both open source, internal and commerial).
 
-[![Build Status](https://travis-ci.com/chilloutdevelopment/pl.chilldev.parent.svg)](https://travis-ci.org/chilloutdevelopment/pl.chilldev.parent)
-[![Coverage Status](https://coveralls.io/repos/chilloutdevelopment/pl.chilldev.parent/badge.png?branch=develop)](https://coveralls.io/r/chilloutdevelopment/pl.chilldev.parent)
-[![Known Vulnerabilities](https://snyk.io/test/github/chilloutdevelopment/pl.chilldev.parent/badge.svg)](https://snyk.io/test/github/chilloutdevelopment/pl.chilldev.parent)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/chilloutdevelopment/pl.chilldev.parent)
+[![Build Status](https://travis-ci.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.svg)](https://travis-ci.org/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
+[![Coverage Status](https://coveralls.io/repos/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.png?branch=develop)](https://coveralls.io/r/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
+[![Known Vulnerabilities](https://snyk.io/test/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg)](https://snyk.io/test/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 
 # Usage
 
-To use it in your project, simply define `pl.chilldev.parent:parent` as your project parent POM:
+To use it in your project, simply define `pl.wrzasq.parent:parent` as your project parent POM:
 
 ```xml
 <project
@@ -33,27 +33,27 @@ To use it in your project, simply define `pl.chilldev.parent:parent` as your pro
     <packaging>pom</packaging>
     <version>${version}</version>
     <parent>
-        <groupId>pl.chilldev.parent</groupId>
+        <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent-generic</artifactId>
-        <version>${pl.chilldev.parent.version}</version>
+        <version>${pl.wrzasq.parent.version}</version>
     </parent>
 </project>
 ```
 
 # Resources
 
--   [GitHub page with API documentation](https://chilloutdevelopment.github.io/pl.chilldev.parent)
--   [Contribution guide](https://github.com/chilloutdevelopment/pl.chilldev.parent/blob/develop/CONTRIBUTING.md)
--   [Issues tracker](https://github.com/chilloutdevelopment/pl.chilldev.parent/issues)
--   [Maven packages](https://search.maven.org/search?q=g:pl.chilldev.parent)
--   [Chillout Development @ GitHub](https://github.com/chilloutdevelopment)
--   [Chillout Development @ Facebook](https://www.facebook.com/chilldev)
+-   [GitHub page with API documentation](https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent)
+-   [Contribution guide](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/blob/develop/CONTRIBUTING.md)
+-   [Issues tracker](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/issues)
+-   [Maven packages](https://search.maven.org/search?q=g:pl.wrzasq.parent)
+-   [Wrzasq.pl @ GitHub](https://github.com/rafalwrzeszcz-wrzasqpl)
+-   [Wrzasq.pl @ Facebook](https://www.facebook.com/wrzasqpl)
 
 # Authors
 
-This project is published under [MIT license](https://github.com/chilloutdevelopment/pl.chilldev.parent/tree/master/LICENSE).
+This project is published under [MIT license](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/tree/master/LICENSE).
 
-**pl.chilldev.parent** is brought to you by [Chillout Development](https://chilldev.pl).
+**pl.wrzasq.parent** is brought to you by [Rafał Wrzeszcz - Wrzasq.pl](https://wrzasq.pl).
 
 List of contributors:
 

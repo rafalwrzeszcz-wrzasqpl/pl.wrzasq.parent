@@ -1,8 +1,8 @@
 <!---
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2016 - 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2016 - 2017, 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Lombok

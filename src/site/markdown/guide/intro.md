@@ -1,15 +1,15 @@
 <!---
-# This file is part of the ChillDev-Parent.
+# This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015, 2017 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017, 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Parent POM
 
-This package defines basic build flow for all of projects developed in **Chillout Development**. But there is no magic - we release it open source, so you can make use of it for rapid bootstrap of your custom project.
+This package defines basic build flow for all of projects developed in **Rafał Wrzeszcz - Wrzasq.pl**. But there is no magic - we release it open source, so you can make use of it for rapid bootstrap of your custom project.
 
-To use it simply use `pl.chilldev.parent:parent` as parent of your project:
+To use it simply use `pl.wrzasq.parent:parent` as parent of your project:
 
 ```xml
 <project
@@ -20,7 +20,7 @@ To use it simply use `pl.chilldev.parent:parent` as parent of your project:
 ">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>pl.chilldev.parent</groupId>
+        <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent-opensource</artifactId>
         <version>{put-latest-version-here}</version>
     </parent>
@@ -34,7 +34,7 @@ To use it simply use `pl.chilldev.parent:parent` as parent of your project:
 There are four parts of this project, however just two of them are important for end-projects:
 
 -   `parent-generic` is a generic **Java** project setup (that binds `parent` project plugins with `parent-checkstyle` ruleset);
--   `parent-opensource` contains additional setup for **Chillout Development** open source projects.
+-   `parent-opensource` contains additional setup for **Rafał Wrzeszcz - Wrzasq.pl** open source projects.
 
 The other two parts are needed to provide shared **Checkstyle** ruleset and bind it together with released project:
 
