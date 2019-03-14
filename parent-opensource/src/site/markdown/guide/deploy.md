@@ -14,3 +14,7 @@ In addition to main POM, for open source projects `pl.wrzasq.parent:parent-opens
 ### `org.apache.maven.plugins:maven-gpg-plugin`
 
 Bound to phase `verify`, creates scertificate, which is needed to publish project artifact to staging repository.
+
+### `org.sonatype.plugins:nexus-staging-maven-plugin`
+
+Open source projects are configured to be deployed into central OSS Sonatype repository.
