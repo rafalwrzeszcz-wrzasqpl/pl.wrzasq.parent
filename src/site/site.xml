@@ -53,10 +53,6 @@
 
         <menu ref="modules"/>
 
-        <menu name="Contribution guide">
-            <item name="Git workflow" href="gitflow.html"/>
-        </menu>
-
         <menu name="User guide">
             <item name="Introduction" href="guide/intro.html"/>
             <item name="Properties" href="guide/properties.html"/>

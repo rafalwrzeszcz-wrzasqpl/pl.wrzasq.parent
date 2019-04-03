@@ -27,13 +27,11 @@ Our current deployment involves following specific actions:
 
 ### Approach
 
-The flow is as follows - when the release is about to happend, it has to be prepared on `master` branch (the contnet of the repository should reflect the desired release state), all versions must be set (preferable with `mvn versions:set` plugin call) to desired value (must not contain `-SNAPSHOT` suffix). Such prepared commit goes to `master` branch and after pushing to **GitHub** repository it triggers the build on **Travis** which involves deployment cycle.
+Each commit to `master` should trigger roll-out of next iterative version. Pipeline should handle versioning, tagging
+and releasing artifacts to repositories (including site generation)
 
-**Note:** Commits to master should be done only when the stable release is meant to happen with the release version set in `pom.xml` file.
-
-**Note:** We decided to rely on `master` branch instead of a tag, as tag creation can be easily automated. Additionally having tagging as part of deployment process can prevent us from creating tags when the build doesn't succeed.
-
-As major and minor releases usually demand some manual changes it's release process need to be initialized manually. However for current active version (being stored on branch `develop`), each update automatically triggers a release version update with full deployment cycle.
+Deployment pipeline will automatically increase release number. If new major or minor release is to be performed,
+version needs to be set manually before committing files (in `pom.xml` of root module).
 
 ## Setup
 

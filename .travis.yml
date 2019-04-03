@@ -100,15 +100,8 @@ deploy:
         # unfortunately deploy script must be single command
         script: "./.travis/release.sh"
         on:
-            branch: "develop"
-            condition: "${TRAVIS_EVENT_TYPE} == push"
-            jdk: "oraclejdk8"
-    -
-        provider: "script"
-        skip_cleanup: true
-        script: "mvn -e deploy site-deploy -P deploy --settings .travis/settings.xml"
-        on:
             branch: "master"
+            condition: "${TRAVIS_EVENT_TYPE} == push"
             jdk: "oraclejdk8"
     -
         provider: "releases"
@@ -118,6 +111,7 @@ deploy:
         file: "*/target/*.jar"
         on:
             branch: "master"
+            condition: "${TRAVIS_EVENT_TYPE} == push"
             jdk: "oraclejdk8"
 
 cache:

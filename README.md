@@ -10,7 +10,7 @@
 **WrzasqPl-Parent** is a generic bootstrap project structure that we use in all our projects (both open source, internal and commerial).
 
 [![Build Status](https://travis-ci.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.svg)](https://travis-ci.org/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
-[![Coverage Status](https://coveralls.io/repos/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg?branch=develop)](https://coveralls.io/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg)](https://coveralls.io/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 [![Known Vulnerabilities](https://snyk.io/test/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg)](https://snyk.io/test/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 
@@ -43,7 +43,7 @@ To use it in your project, simply define `pl.wrzasq.parent:parent` as your proje
 # Resources
 
 -   [GitHub page with API documentation](https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent)
--   [Contribution guide](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/blob/develop/CONTRIBUTING.md)
+-   [Contribution guide](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/blob/master/CONTRIBUTING.md)
 -   [Issues tracker](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/issues)
 -   [Maven packages](https://search.maven.org/search?q=g:pl.wrzasq.parent)
 -   [Wrzasq.pl @ GitHub](https://github.com/rafalwrzeszcz-wrzasqpl)
