@@ -92,17 +92,12 @@ before_deploy:
     - "chmod 600 .travis/id_rsa"
     - "ssh-add .travis/id_rsa"
     - "echo -e \"Host github.com\\n    StrictHostKeyChecking no\\n\" >> ~/.ssh/config"
+    # this actually does the job, but we need it to produce artifacts for "releases" provider
+    # entire "before_deploy" will not be executed if there is no deploy to be processed
+    - "./.travis/release.sh"
     - "export TRAVIS_TAG=$(git describe --abbrev=0)"
 
 deploy:
-    -
-        provider: "script"
-        # unfortunately deploy script must be single command
-        script: "./.travis/release.sh"
-        on:
-            branch: "master"
-            condition: "${TRAVIS_EVENT_TYPE} == push"
-            jdk: "oraclejdk8"
     -
         provider: "releases"
         skip_cleanup: true
