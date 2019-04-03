@@ -89,10 +89,8 @@
 </ul></div>
 <div class="section">
 <h3><a name="Approach"></a>Approach</h3>
-<p>The flow is as follows - when the release is about to happend, it has to be prepared on <tt>master</tt> branch (the contnet of the repository should reflect the desired release state), all versions must be set (preferable with <tt>mvn versions:set</tt> plugin call) to desired value (must not contain <tt>-SNAPSHOT</tt> suffix). Such prepared commit goes to <tt>master</tt> branch and after pushing to <b>GitHub</b> repository it triggers the build on <b>Travis</b> which involves deployment cycle.</p>
-<p><b>Note:</b> Commits to master should be done only when the stable release is meant to happen with the release version set in <tt>pom.xml</tt> file.</p>
-<p><b>Note:</b> We decided to rely on <tt>master</tt> branch instead of a tag, as tag creation can be easily automated. Additionally having tagging as part of deployment process can prevent us from creating tags when the build doesn&#x2019;t succeed.</p>
-<p>As major and minor releases usually demand some manual changes it&#x2019;s release process need to be initialized manually. However for current active version (being stored on branch <tt>develop</tt>), each update automatically triggers a release version update with full deployment cycle.</p></div></div>
+<p>Each commit to <tt>master</tt> should trigger roll-out of next iterative version. Pipeline should handle versioning, tagging and releasing artifacts to repositories (including site generation)</p>
+<p>Deployment pipeline will automatically increase release number. If new major or minor release is to be performed, version needs to be set manually before committing files (in <tt>pom.xml</tt> of root module).</p></div></div>
 <div class="section">
 <h2><a name="Setup"></a>Setup</h2>
 <p>As the deployment process relies on some sensitive data, like <b>Sonatype</b> credentials, <b>GitHub</b> token etc., to pass them safely into the build we use environment variables encoded with <b>Travis</b> repository key. To pass large blobs like keys, we ue additional secret string that we randomly generate on our own for each repository, store it encoded as well and use as a key to encrypt/decrypt files with <tt>openssl</tt>.</p>
@@ -198,7 +196,7 @@ travis encrypt SECRET=$SECRET
             <p>Copyright &copy;2015&#x2013;2019
 <a href="https://wrzasq.pl/">Rafał Wrzeszcz - Wrzasq.pl</a>.
 All rights reserved.        <li id="publishDate" class="pull-right">Last Published: 2019-04-03</li>
-          <li id="projectVersion" class="pull-right">Version: 1.0.10</li>
+          <li id="projectVersion" class="pull-right">Version: 1.0.11-SNAPSHOT</li>
 </p>
         </div>
         </div>
