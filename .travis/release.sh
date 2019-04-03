@@ -27,7 +27,6 @@ git commit -m "[skip ci] Automated release release."
 
 # perform a release
 mvn -e deploy site-deploy -P deploy --settings .travis/settings.xml
-export TRAVIS_TAG=release-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout=true)
 
 # now create a new version commit
 mvn build-helper:parse-version versions:set versions:commit \

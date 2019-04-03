@@ -92,6 +92,7 @@ before_deploy:
     - "chmod 600 .travis/id_rsa"
     - "ssh-add .travis/id_rsa"
     - "echo -e \"Host github.com\\n    StrictHostKeyChecking no\\n\" >> ~/.ssh/config"
+    - "export TRAVIS_TAG=$(git describe --abbrev=0)"
 
 deploy:
     -
