@@ -26,7 +26,7 @@ git add -u
 git commit -m "[skip ci] Automated release release."
 
 # perform a release
-mvn -e deploy site-deploy -P deploy --settings .travis/settings.xml
+mvn -e clean deploy site-deploy -P deploy --settings .travis/settings.xml
 
 # now create a new version commit
 mvn build-helper:parse-version versions:set versions:commit \
