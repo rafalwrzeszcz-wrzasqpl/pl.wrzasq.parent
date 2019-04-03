@@ -96,7 +96,7 @@ Uses **Node** version `9.3.0` and **npm** version `5.6.0` and executes three sta
 
 -   `install-node-and-npm`, which installs local version of **Node** and **npm**;
 -   `npm`, which installs build toold defined in `package.json` file (**npm** packages);
--   `gulp`, which builds frontend assets (runs **Gulp**) - everything else should be handled in `gulpfile.js`.
+-   further `npm` tool calls to forward **Maven** lifecycle phases to Node project.
 
 ## `org.apache.maven.plugins:maven-jar-plugin`
 
