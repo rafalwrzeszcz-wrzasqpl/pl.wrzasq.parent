@@ -105,7 +105,6 @@ deploy:
             jdk: "oraclejdk8"
     -
         provider: "releases"
-        skip_cleanup: true
         api_key: "${GITHUB_TOKEN}"
         file_glob: true
         file: "*/target/*.jar"
