@@ -10,8 +10,11 @@
 It's pointless to define any common dependencies, every project has own, very dependent set of dependencies. But when it comes to tests, the base dependencies are always the same. Parent POM defines some common `test` scope dependencies:
 
 -   `com.github.stefanbirkner:system-rules`
+-   `io.cucumber:cucumber-java8`
+-   `io.cucumber:cucumber-junit`
 -   `org.junit.jupiter:junit-jupiter-api`
 -   `org.junit.jupiter:junit-jupiter-engine`
+-   `org.junit.vintage:junit-vintage-engine` (needed until **Cucumber** supports **JUnit 5**)
 -   `org.mockito:mockito-core`
 -   `org.mockito:mockito-junit-jupiter`
 -   `org.projectlombok:lombok`

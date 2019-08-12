@@ -50,8 +50,11 @@ Java compilation is done with all possible linting restrictions (`-Xlint:all` co
 Dependency plugin is configured to ignore common test-scope dependencies that may not be used by all projects:
 
 -   `com.github.stefanbirkner:system-rules`
+-   `io.cucumber:cucumber-java8`
+-   `io.cucumber:cucumber-junit`
 -   `org.junit.jupiter:junit-jupiter-api`
 -   `org.junit.jupiter:junit-jupiter-engine`
+-   `org.junit.vintage:junit-vintage-engine`
 -   `org.mockito:mockito-core`
 -   `org.mockito:mockito-junit-jupiter`
 -   `org.projectlombok:lombok`
@@ -120,4 +123,4 @@ Additionally it excludes all `META-INF/*.SF`, `META-INF/*.DSA` and `META-INF/*.R
 
 ## `integration-tests`
 
-This profile activates `maven-failsafe-plugin` and disables `maven-surefire-plugin` tests.
+This profile activates `maven-failsafe-plugin`.

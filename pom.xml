@@ -707,9 +707,6 @@
 
         <profile>
             <id>integration-tests</id>
-            <properties>
-                <skip.surefire.tests>true</skip.surefire.tests>
-            </properties>
             <build>
                 <plugins>
                     <plugin>
