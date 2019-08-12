@@ -26,6 +26,7 @@
     <inceptionYear>2015</inceptionYear>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skip.surefire.tests>false</skip.surefire.tests>
     </properties>
 
     <!-- legal info -->
@@ -251,6 +252,12 @@
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>3.0.0-M3</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
                     <version>1.6</version>
                     <executions>
@@ -392,6 +399,7 @@
                     <version>2.22.1</version>
                     <configuration>
                         <trimStackTrace>false</trimStackTrace>
+                        <skipTests>${skip.surefire.tests}</skipTests>
                     </configuration>
                 </plugin>
 
@@ -692,6 +700,29 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-scm-plugin</artifactId>
                         <inherited>false</inherited>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>integration-tests</id>
+            <properties>
+                <skip.surefire.tests>true</skip.surefire.tests>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>

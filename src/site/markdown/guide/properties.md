@@ -7,4 +7,6 @@
 
 # Properties
 
-The only property that is defined for now is `project.build.sourceEncoding`, which is set to `UTF-8`.
+-   `project.build.sourceEncoding` is set to `UTF-8`;
+-   `skip.surefire.tests` is `false` by default and it's injected into **Surefire** plugin configuration (it was
+introduced to split **Surefire** and **Failsafe** tests).

@@ -30,6 +30,7 @@ Additionally following plugins are defined in management section, so they are no
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
 -   `org.apache.maven.plugins:maven-deploy-plugin`
+-   `org.apache.maven.plugins:maven-failsafe-plugin`
 -   `org.apache.maven.plugins:maven-install-plugin`
 -   `org.apache.maven.plugins:maven-jar-plugin`
 -   `org.apache.maven.plugins:maven-resources-plugin`
@@ -114,3 +115,9 @@ Generates **JAR** artifact including all dependencies in one package, named with
 Also it's by default configured to merge all `META-INF/services/*` files and `META-INF/spring.handlers` and `META-INF/spring.schemas`.
 
 Additionally it excludes all `META-INF/*.SF`, `META-INF/*.DSA` and `META-INF/*.RSA` files they would foul Java when reading consolidated archive.
+
+# Profiles
+
+## `integration-tests`
+
+This profile activates `maven-failsafe-plugin` and disables `maven-surefire-plugin` tests.
