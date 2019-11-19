@@ -24,7 +24,6 @@ Following build plugins are defined in POM structure - all of them are included 
 
 Additionally following plugins are defined in management section, so they are not automatically executed in your build, but you can enable them by including them in your project (or are executed by default by **Maven** and only versions and configurations are overridden):
 
--   `com.alexecollins.docker:docker-maven-plugin`
 -   `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
 -   `com.github.eirslett:frontend-maven-plugin`
 -   `org.apache.maven.plugins:maven-clean-plugin`
@@ -91,10 +90,6 @@ Build helper plugin exposes version components as a series of properties with pr
 ## `org.eluder.coveralls:coveralls-maven-plugin`
 
 Coveralls plugin is not bound to any phase by default, but it can be used from command line.
-
-## `com.alexecollins.docker:docker-maven-plugin`
-
-Generates **Docker** image in `package` phase.
 
 ## `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
 

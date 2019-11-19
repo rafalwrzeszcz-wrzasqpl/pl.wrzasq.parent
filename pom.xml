@@ -107,19 +107,6 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>com.alexecollins.docker</groupId>
-                    <artifactId>docker-maven-plugin</artifactId>
-                    <version>2.11.24</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>package</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
                     <groupId>com.bluetrainsoftware.maven.plugins</groupId>
                     <artifactId>s3-upload-maven-plugin</artifactId>
                     <version>1.7</version>
@@ -218,7 +205,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>3.8.1</version>
                     <configuration>
                         <release>11</release>
                         <forceJavacCompilerUse>true</forceJavacCompilerUse>
@@ -238,7 +225,7 @@
                             <path>
                                 <groupId>org.projectlombok</groupId>
                                 <artifactId>lombok-maven-plugin</artifactId>
-                                <version>1.18.6.0</version>
+                                <version>1.18.10.0</version>
                             </path>
                         </annotationProcessorPaths>
                     </configuration>
@@ -247,13 +234,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
+                    <version>3.0.0-M1</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>3.0.0-M3</version>
+                    <version>3.0.0-M4</version>
                 </plugin>
 
                 <plugin>
@@ -273,13 +260,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <version>3.0.0-M1</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>3.2.0</version>
                     <configuration>
                         <archive>
                             <index>true</index>
@@ -370,7 +357,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.7.1</version>
+                    <version>3.8.2</version>
                     <dependencies>
                         <dependency>
                             <groupId>net.trajano.wagon</groupId>
@@ -396,7 +383,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
+                    <version>3.0.0-M4</version>
                     <configuration>
                         <trimStackTrace>false</trimStackTrace>
                         <skipTests>${skip.surefire.tests}</skipTests>
@@ -467,7 +454,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.1.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -497,7 +484,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -549,7 +536,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.3</version>
+                <version>0.8.5</version>
                 <executions>
                     <execution>
                         <goals>
@@ -562,7 +549,7 @@
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
-                <version>1.18.6.0</version>
+                <version>1.18.10.0</version>
                 <configuration>
                     <addOutputDirectory>false</addOutputDirectory>
                     <sourceDirectory>src/main/java</sourceDirectory>
@@ -606,7 +593,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.1.1</version>
                 <configuration>
                     <show>private</show>
                     <excludePackageNames>test.*</excludePackageNames>
@@ -636,7 +623,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.12.0</version>
                 <configuration>
                     <analysisCache>true</analysisCache>
                 </configuration>
@@ -651,7 +638,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.22.1</version>
+                <version>3.0.0-M4</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -674,7 +661,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.3</version>
+                <version>0.8.5</version>
             </plugin>
         </plugins>
     </reporting>
