@@ -9,6 +9,7 @@
 
 Following build plugins are defined in POM structure - all of them are included in active plugins set (automatically inherited):
 
+-   `findbugs-maven-plugin:spotbugs-maven-plugin`
 -   `org.apache.maven.plugins:maven-checkstyle-plugin` (via `parent-generic`)
 -   `org.apache.maven.plugins:maven-dependency-plugin`
 -   `org.apache.maven.plugins:maven-enforcer-plugin`
@@ -17,7 +18,6 @@ Following build plugins are defined in POM structure - all of them are included 
 -   `org.apache.maven.plugins:maven-project-info-reports-plugin`
 -   `org.apache.maven.plugins:maven-source-plugin`
 -   `org.codehaus.mojo:build-helper-maven-plugin`
--   `org.codehaus.mojo:findbugs-maven-plugin`
 -   `org.eluder.coveralls:coveralls-maven-plugin`
 -   `org.jacoco:jacoco-maven-plugin`
 -   `org.projectlombok:lombok-maven-plugin`
@@ -41,9 +41,14 @@ Additionally following plugins are defined in management section, so they are no
 
 Some of them are configured in specific way:
 
+## `findbugs-maven-plugin:spotbugs-maven-plugin`
+
+SpotBugs plugin is configured for maximum effort and low treshold to perform most aggressive.
+
 ## `org.apache.maven.plugins:maven-compiler-plugin`
 
-Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 8** version right now.
+Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 11**
+version right now.
 
 ## `org.apache.maven.plugins:maven-dependency-plugin`
 
@@ -64,7 +69,7 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 
 ## `org.apache.maven.plugins:maven-enforcer-plugin`
 
-Required **Maven** version is at least `3.3.9` and **Java** `1.8`.
+Required **Maven** version is at least `3.3.9` and **Java** `11`.
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 
@@ -82,10 +87,6 @@ It allows for using **Markdown** format in your documentation and publishing sit
 ## `org.codehaus.mojo:build-helper-maven-plugin`
 
 Build helper plugin exposes version components as a series of properties with prefix `semver.`.
-
-## `org.codehaus.mojo:findbugs-maven-plugin`
-
-FindBugs plugin is configured for maximum effort and low treshold to perform most aggressive.
 
 ## `org.eluder.coveralls:coveralls-maven-plugin`
 

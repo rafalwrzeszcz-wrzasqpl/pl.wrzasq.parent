@@ -18,10 +18,6 @@ branches:
         - "/^release-/"
 
 jdk:
-    - "openjdk8"
-    - "oraclejdk8"
-    - "oraclejdk9"
-    - "openjdk10"
     - "openjdk11"
     - "oraclejdk11"
 
@@ -107,7 +103,7 @@ deploy:
         on:
             branch: "master"
             condition: "${TRAVIS_EVENT_TYPE} == push"
-            jdk: "oraclejdk8"
+            jdk: "oraclejdk11"
 
 cache:
     directories:

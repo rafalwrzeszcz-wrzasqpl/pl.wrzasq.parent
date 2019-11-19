@@ -9,6 +9,7 @@
 
 Following reporting plugins are defined in POM structure:
 
+-   `findbugs-maven-plugin:spotbugs-maven-plugin`
 -   `org.apache.maven.plugins:maven-checkstyle-plugin` (via `parent-generic`)
 -   `org.apache.maven.plugins:maven-dependency-plugin`
 -   `org.apache.maven.plugins:maven-javadoc-plugin`
@@ -16,10 +17,13 @@ Following reporting plugins are defined in POM structure:
 -   `org.apache.maven.plugins:maven-pmd-plugin`
 -   `org.apache.maven.plugins:maven-project-info-reports-plugin`
 -   `org.apache.maven.plugins:maven-surefire-report-plugin`
--   `org.codehaus.mojo:findbugs-maven-plugin`
 -   `org.jacoco:jacoco-maven-plugin`
 
 All of them are included in active plugins set (automatically inherited). Some of them are configured in specific way:
+
+## `findbugs-maven-plugin:spotbugs-maven-plugin`
+
+SpotBugs report is built based on the same configuration like it's build plugin.
 
 ## `org.apache.maven.plugins:maven-checkstyle-plugin`
 
@@ -32,7 +36,3 @@ JavaDoc report includes API documentation of entire project (including private m
 ## `org.apache.maven.plugins:maven-project-info-reports-plugin`
 
 To speed up report generation, info report contains no dependencies repository location.
-
-## `org.codehaus.mojo:findbugs-maven-plugin`
-
-FindBugs report is built based on the same configuration like it's build plugin.
