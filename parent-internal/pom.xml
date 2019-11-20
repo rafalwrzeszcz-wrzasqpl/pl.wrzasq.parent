@@ -31,6 +31,16 @@
 
     <!-- S3 repository setup -->
 
+    <build>
+        <extensions>
+            <extension>
+                <groupId>com.github.nodely</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>1.0.0</version>
+            </extension>
+        </extensions>
+    </build>
+
     <repositories>
         <repository>
             <id>aws-s3</id>
