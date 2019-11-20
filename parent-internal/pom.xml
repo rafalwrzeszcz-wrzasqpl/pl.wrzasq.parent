@@ -31,16 +31,6 @@
 
     <!-- S3 repository setup -->
 
-    <build>
-        <extensions>
-            <extension>
-                <groupId>org.zalando.org.springframework.build</groupId>
-                <artifactId>aws-maven</artifactId>
-                <version>5.0.0.RELEASE-zal-2</version>
-            </extension>
-        </extensions>
-    </build>
-
     <repositories>
         <repository>
             <id>aws-s3</id>
