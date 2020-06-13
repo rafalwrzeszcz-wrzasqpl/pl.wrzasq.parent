@@ -130,7 +130,7 @@
                 <plugin>
                     <groupId>com.github.eirslett</groupId>
                     <artifactId>frontend-maven-plugin</artifactId>
-                    <version>1.7.6</version>
+                    <version>1.10.0</version>
                     <configuration>
                         <nodeVersion>v12.1.0</nodeVersion>
                         <npmVersion>6.9.0</npmVersion>
@@ -325,7 +325,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>3.2.1</version>
+                    <version>3.2.4</version>
                     <configuration>
 <!-- TODO: breaks logback
                         <minimizeJar>true</minimizeJar>
@@ -364,7 +364,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.8.2</version>
+                    <version>3.9.0</version>
                     <dependencies>
                         <dependency>
                             <groupId>net.trajano.wagon</groupId>
@@ -382,7 +382,7 @@
                         <dependency>
                             <groupId>org.eclipse.jgit</groupId>
                             <artifactId>org.eclipse.jgit</artifactId>
-                            <version>5.3.1.201904271842-r</version>
+                            <version>5.7.0.202003110725-r</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -415,7 +415,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.1.2</version>
                 <configuration>
                     <failOnWarning>true</failOnWarning>
                 </configuration>
@@ -438,7 +438,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M2</version>
+                <version>3.0.0-M3</version>
                 <configuration>
                     <rules>
                         <requireJavaVersion>
@@ -461,7 +461,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -474,7 +474,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.12.0</version>
+                <version>3.13.0</version>
                 <configuration>
                     <analysisCache>true</analysisCache>
                 </configuration>
@@ -491,7 +491,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -504,7 +504,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.0</version>
                 <configuration>
                     <propertyPrefix>semver</propertyPrefix>
                 </configuration>
@@ -520,7 +520,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.12.2</version>
+                <version>4.0.0</version>
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
@@ -556,7 +556,7 @@
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
-                <version>1.18.10.0</version>
+                <version>1.18.12.0</version>
                 <configuration>
                     <addOutputDirectory>false</addOutputDirectory>
                     <sourceDirectory>src/main/java</sourceDirectory>
@@ -600,7 +600,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.2.0</version>
                 <configuration>
                     <show>private</show>
                     <excludePackageNames>test.*</excludePackageNames>
@@ -630,7 +630,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.12.0</version>
+                <version>3.13.0</version>
                 <configuration>
                     <analysisCache>true</analysisCache>
                 </configuration>
@@ -639,7 +639,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.0</version>
             </plugin>
 
             <plugin>
