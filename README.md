@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015, 2017 - 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017 - 2020 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # WrzasqPl-Parent
@@ -47,6 +47,7 @@ To use it in your project, simply define `pl.wrzasq.parent:parent` as your proje
 -   [Maven packages](https://search.maven.org/search?q=g:pl.wrzasq.parent)
 -   [Wrzasq.pl @ GitHub](https://github.com/rafalwrzeszcz-wrzasqpl)
 -   [Wrzasq.pl @ Facebook](https://www.facebook.com/wrzasqpl)
+-   [Wrzasq.pl @ LinkedIn](https://www.linkedin.com/company/wrzasq-pl/)
 
 # Authors
 

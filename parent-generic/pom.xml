@@ -137,14 +137,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- TODO: remove once Cucumber supports JUnit 5 -->
-        <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>5.7.0-M1</version>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>

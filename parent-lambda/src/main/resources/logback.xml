@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# This file is part of the pl.wrzasq.parent.
+#
+# @license http://mit-license.org/ The MIT license
+# @copyright 2020 © by Rafał Wrzeszcz - Wrzasq.pl.
+-->
+<configuration scan="true">
+    <variable name="LOG_LEVEL" value="${LOG_LEVEL:-INFO}" />
+
+    <!-- stdout output -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%thread] %-5level %logger - %msg%n%ex{full}</pattern>
+        </encoder>
+    </appender>
+
+    <root>
+        <level value="${LOG_LEVEL}"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
