@@ -66,7 +66,6 @@
                     <ignoredDependencies>
                         <ignoredDependency>io.cucumber:cucumber-java8::</ignoredDependency>
                         <ignoredDependency>io.cucumber:cucumber-junit::</ignoredDependency>
-                        <ignoredDependency>com.github.stefanbirkner:system-rules::</ignoredDependency>
                         <ignoredDependency>org.junit.jupiter:junit-jupiter-api::</ignoredDependency>
                         <ignoredDependency>org.junit.jupiter:junit-jupiter-engine::</ignoredDependency>
                         <ignoredDependency>org.junit.vintage:junit-vintage-engine::</ignoredDependency>
@@ -74,8 +73,6 @@
                         <ignoredDependency>org.mockito:mockito-junit-jupiter::</ignoredDependency>
                         <ignoredDependency>org.projectlombok:lombok::</ignoredDependency>
                         <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
-                        <ignoredDependency>org.springframework:spring-test::</ignoredDependency>
-                        <ignoredDependency>org.springframework.security:spring-security-test::</ignoredDependency>
                     </ignoredDependencies>
                 </configuration>
             </plugin>
@@ -156,20 +153,6 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>3.3.3</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>5.2.7.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <version>5.3.3.RELEASE</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -53,7 +53,6 @@ version right now.
 
 Dependency plugin is configured to ignore common test-scope dependencies that may not be used by all projects:
 
--   `com.github.stefanbirkner:system-rules`
 -   `io.cucumber:cucumber-java8`
 -   `io.cucumber:cucumber-junit`
 -   `org.junit.jupiter:junit-jupiter-api`
@@ -63,8 +62,6 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 -   `org.mockito:mockito-junit-jupiter`
 -   `org.projectlombok:lombok`
 -   `org.slf4j:slf4j-nop`
--   `org.springframework:spring-test`
--   `org.springframework.security:spring-security-test`
 
 ## `org.apache.maven.plugins:maven-enforcer-plugin`
 
@@ -100,7 +97,7 @@ Executes `s3-upload` action during the `deploy` phase.
 Uses **Node** version `9.3.0` and **npm** version `5.6.0` and executes three stages:
 
 -   `install-node-and-npm`, which installs local version of **Node** and **npm**;
--   `npm`, which installs build toold defined in `package.json` file (**npm** packages);
+-   `npm`, which installs build tools defined in `package.json` file (**npm** packages);
 -   further `npm` tool calls to forward **Maven** lifecycle phases to Node project.
 
 ## `org.apache.maven.plugins:maven-jar-plugin`
@@ -110,8 +107,6 @@ Generates **JAR** artifact with manifest containing project meta data.
 ## `org.apache.maven.plugins:maven-shade-plugin`
 
 Generates **JAR** artifact including all dependencies in one package, named with suffix `-standalone`, which is possible to run directly, without any additional class-path packages.
-
-Also it's by default configured to merge all `META-INF/services/*` files and `META-INF/spring.handlers` and `META-INF/spring.schemas`.
 
 Additionally it excludes all `META-INF/*.SF`, `META-INF/*.DSA` and `META-INF/*.RSA` files they would foul Java when reading consolidated archive.
 
