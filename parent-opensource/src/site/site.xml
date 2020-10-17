@@ -16,7 +16,7 @@
 
         <menu name="Guide">
             <item name="Deploy profile" href="guide/deploy.html"/>
-            <item name="Travis CI" href="guide/travis.html"/>
+            <item name="GitHub Actions" href="guide/github-actions.html"/>
         </menu>
 
         <menu ref="reports"/>
