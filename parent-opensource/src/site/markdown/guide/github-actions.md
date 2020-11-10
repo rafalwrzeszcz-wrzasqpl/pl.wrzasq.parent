@@ -56,12 +56,12 @@ environment variables are used:
 -   `OSSRH_PASSWORD` - **Sonatype** deployments account password;
 -   `GPG_PASSPHRASE` - password for **GPG** key;
 -   `GPG_PRIVATE_KEY` - **GPG** private key;
--   `SSH_PRIVATE_KEY` - repository-specific, deployment **SSH** key;
 -   `COVERALLS_REPOTOKEN` (repository-specific, not used in `pl.wrzasq.parent`) - project key for **Coveralls**;
--   `GITHUB_TOKEN` (specific for each GitHub action run) - **GitHub** access token, used for deploying pages.
+-   `GITHUB_ACTOR` (specific for each GitHub action run) - **GitHub** access username, used for deployment purposes;
+-   `GITHUB_TOKEN` (specific for each GitHub action run) - **GitHub** access token, used for deployment purposes.
 
-They are (except `GITHUB_TOKEN`, which is provided by **GitHub Actions**) stored as secret variables in organization or
-repository respectively.
+They are (except `GITHUB_ACTOR` and `GITHUB_TOKEN`, which is provided by **GitHub Actions**) stored as secret variables
+in organization or repository respectively.
 
 ### Plain files
 

@@ -96,7 +96,7 @@
         </snapshotRepository>
         <site>
             <id>github</id>
-            <url>github:http://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent/</url>
+            <url>git:https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.git?gh-pages#</url>
         </site>
     </distributionManagement>
 
@@ -315,7 +315,6 @@
                     <version>1.11.2</version>
                     <configuration>
                         <tag>release-${project.version}</tag>
-                        <connectionType>developerConnection</connectionType>
                         <message>Release ${project.version} tagged.</message>
                     </configuration>
                     <executions>
@@ -370,19 +369,6 @@
                             <groupId>net.trajano.wagon</groupId>
                             <artifactId>wagon-git</artifactId>
                             <version>2.0.4</version>
-                            <exclusions>
-                                <exclusion>
-                                    <groupId>org.eclipse.jgit</groupId>
-                                    <artifactId>org.eclipse.jgit</artifactId>
-                                </exclusion>
-                            </exclusions>
-                        </dependency>
-
-                        <!-- TODO: this is needed to fix Git SSH key negotation -->
-                        <dependency>
-                            <groupId>org.eclipse.jgit</groupId>
-                            <artifactId>org.eclipse.jgit</artifactId>
-                            <version>5.7.0.202003110725-r</version>
                         </dependency>
                     </dependencies>
                 </plugin>

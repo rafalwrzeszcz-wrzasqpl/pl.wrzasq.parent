@@ -61,12 +61,6 @@ jobs:
                     key: "${{ runner.os }}-m2-11"
             # Git setup
             -
-                uses: "webfactory/ssh-agent@v0.4.1"
-                with:
-                    ssh-private-key: "${{ secrets.SSH_PRIVATE_KEY }}"
-            -
-                run: "echo -e \"Host github.com\\n    StrictHostKeyChecking no\\n\" >> ~/.ssh/config"
-            -
                 run: "git config user.name \"GitHub Actions\""
             -
                 run: "git config user.email \"office@wrzasq.pl\""
@@ -85,6 +79,7 @@ jobs:
             -
                 run: "mvn -B -e clean deploy site-deploy -P deploy --settings .github/settings.xml"
                 env:
+                    GITHUB_ACTOR: "${{ secrets.GITHUB_ACTOR }}"
                     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
                     OSSRH_USERNAME: "${{ secrets.OSSRH_USERNAME }}"
                     OSSRH_PASSWORD: "${{ secrets.OSSRH_PASSWORD }}"
