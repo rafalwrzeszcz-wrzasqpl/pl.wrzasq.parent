@@ -74,8 +74,8 @@
     </issueManagement>
 
     <ciManagement>
-        <system>GitHub Actions</system>
-        <url>https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/actions</url>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent</url>
     </ciManagement>
 
     <scm>
@@ -260,12 +260,6 @@
                             <goals>
                                 <goal>sign</goal>
                             </goals>
-                            <configuration>
-                                <gpgArguments>
-                                    <arg>--pinentry-mode</arg>
-                                    <arg>loopback</arg>
-                                </gpgArguments>
-                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
@@ -315,6 +309,7 @@
                     <version>1.11.2</version>
                     <configuration>
                         <tag>release-${project.version}</tag>
+                        <connectionType>developerConnection</connectionType>
                         <message>Release ${project.version} tagged.</message>
                     </configuration>
                     <executions>

@@ -3,7 +3,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017, 2019 - 2020 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2017, 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -24,7 +24,7 @@
     </parent>
 
     <!-- project meta info -->
-    <name>WrzasqPl Parent OpenSource</name>
+    <name>WrzasqPl Parent OpenSouece</name>
     <url>https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent/parent-opensource/</url>
     <description>More detailed bootstrap with additional setup for open source projects.</description>
     <inceptionYear>2015</inceptionYear>

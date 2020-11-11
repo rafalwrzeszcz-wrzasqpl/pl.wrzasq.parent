@@ -9,7 +9,7 @@
 
 **WrzasqPl-Parent** is a generic bootstrap project structure that we use in all our projects (both open source, internal and commerial).
 
-[![Build Status](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/workflows/build/badge.svg)](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/actions)
+[![Build Status](https://travis-ci.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.svg)](https://travis-ci.org/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 [![Coverage Status](https://coveralls.io/repos/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg)](https://coveralls.io/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 
