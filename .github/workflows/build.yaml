@@ -56,6 +56,11 @@ jobs:
                 with:
                     java-version: "11"
                     distribution: "zulu"
+                    server-id: "ossrh"
+                    server-username: "OSSRH_USERNAME"
+                    server-password: "OSSRH_PASSWORD"
+                    gpg-private-key: "${{ secrets.GPG_PRIVATE_KEY }}"
+                    gpg-passphrase: "GPG_PASSPHRASE"
             -
                 uses: "actions/cache@v2.1.6"
                 with:
@@ -66,11 +71,6 @@ jobs:
                 run: |
                     git config user.name "GitHub Actions"
                     git config user.email "office@wrzasq.pl"
-            -
-                uses: "crazy-max/ghaction-import-gpg@v3.1.0"
-                with:
-                    gpg-private-key: "${{ secrets.GPG_PRIVATE_KEY }}"
-                    passphrase: "${{ secrets.GPG_PASSPHRASE }}"
             # first make current version release
             -
                 run: "mvn -B versions:set versions:commit -DremoveSnapshot=true"
@@ -80,7 +80,7 @@ jobs:
                     git commit -m "[skip ci] Automated release release."
             # perform a release
             -
-                run: "mvn -B -e clean deploy site -P deploy --settings .github/settings.xml"
+                run: "mvn -B -e clean deploy site -P deploy"
                 env:
                     GITHUB_ACTOR: "${{ secrets.GITHUB_ACTOR }}"
                     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
