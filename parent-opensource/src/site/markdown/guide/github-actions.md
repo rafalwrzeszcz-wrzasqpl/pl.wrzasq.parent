@@ -37,6 +37,9 @@ level).
 
 **Note:** Everything related to **GitHub Actions** pipeline should go into `.github/` subdirectory.
 
+To keep our project **Maven** setup independent of the chosen deployment pipeline we keep dedicated `settings.xml` for
+**GitHub Actions** deploys that populates the credentials and other properties.
+
 **Note:** Never, ever commit unencrypted keys to the repositories (not even private ones)!
 
 ### Environment variables

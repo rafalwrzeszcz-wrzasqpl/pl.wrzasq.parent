@@ -8,8 +8,7 @@
 # `deploy` profile
 
 In addition to main POM, for open source projects `pl.wrzasq.parent:parent-opensource` defines `deploy` profile (to use
-as `mvn -P deploy`), which performs deployment to public repositories (project artifacts to deployment repository, site
-committed to `gh-pages` branch of **GitHub** repository).
+as `mvn -P deploy`), which performs deployment to public repositories.
 
 ## Plugins
 

@@ -80,7 +80,6 @@
 
     <scm>
         <connection>scm:git:https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.git</connection>
-        <developerConnection>scm:git:git@github.com:rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.git</developerConnection>
         <url>https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent</url>
     </scm>
 
@@ -304,7 +303,6 @@
                     <version>1.11.2</version>
                     <configuration>
                         <tag>release-${project.version}</tag>
-                        <connectionType>developerConnection</connectionType>
                         <message>Release ${project.version} tagged.</message>
                     </configuration>
                     <executions>
