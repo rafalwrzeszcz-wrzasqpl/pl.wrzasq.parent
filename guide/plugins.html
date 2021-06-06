@@ -126,14 +126,6 @@
 <p>Required <b>Maven</b> version is at least <code>3.3.9</code> and <b>Java</b> <code>11</code>.</p></section><section>
 <h2><a name="org.apache.maven.plugins:maven-resources-plugin"></a><code>org.apache.maven.plugins:maven-resources-plugin</code></h2>
 <p>Resources are configured to be processed with <code>\</code> escape character (when filtered). Initially resources are configured to be located at <code>src/main/resources</code> and set for filtering. Additionally <code>src/main/resources-binary</code> directory is defined to be used as-it-is - these resources won&#x2019;t be filtered.</p></section><section>
-<h2><a name="org.apache.maven.plugins:maven-site-plugin"></a><code>org.apache.maven.plugins:maven-site-plugin</code></h2>
-<p>Site plugin is configured to work with additional dependencies:</p>
-<ul>
-
-<li><code>net.trajano.wagon:wagon-git</code></li>
-<li><code>org.apache.maven.doxia:doxia-module-markdown</code></li>
-</ul>
-<p>It allows for using <b>Markdown</b> format in your documentation and publishing site to Git SCM. We picked this generic approach over using dedicated GitHub plugin <code>com.github.github:site-maven-plugin</code>, because it uses GitHub API which heavily limits upload rate (too took ~20 minutes to upload small module page).</p></section><section>
 <h2><a name="org.codehaus.mojo:build-helper-maven-plugin"></a><code>org.codehaus.mojo:build-helper-maven-plugin</code></h2>
 <p>Build helper plugin exposes version components as a series of properties with prefix <code>semver.</code>.</p></section><section>
 <h2><a name="org.eluder.coveralls:coveralls-maven-plugin"></a><code>org.eluder.coveralls:coveralls-maven-plugin</code></h2>

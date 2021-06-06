@@ -68,7 +68,7 @@
 # @copyright 2015 - 2017, 2019, 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <h1><code>deploy</code> profile</h1>
-<p>In addition to main POM, for open source projects <code>pl.wrzasq.parent:parent-opensource</code> defines <code>deploy</code> profile (to use as <code>mvn -P deploy</code>), which performs deployment to public repositories (project artifacts to deployment repository, site committed to <code>gh-pages</code> branch of <b>GitHub</b> repository).</p><section>
+<p>In addition to main POM, for open source projects <code>pl.wrzasq.parent:parent-opensource</code> defines <code>deploy</code> profile (to use as <code>mvn -P deploy</code>), which performs deployment to public repositories.</p><section>
 <h2><a name="Plugins"></a>Plugins</h2><section>
 <h3><a name="org.apache.maven.plugins:maven-gpg-plugin"></a><code>org.apache.maven.plugins:maven-gpg-plugin</code></h3>
 <p>Bound to phase <code>verify</code>, creates a certificate, which is needed to publish project artifact to staging repository.</p></section><section>
