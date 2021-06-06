@@ -85,7 +85,6 @@
 <h2><a name="Setup"></a>Setup</h2>
 <p>As the deployment process relies on some sensitive data, like <b>Sonatype</b> credentials, <b>GitHub</b> token etc., to pass them safely into the build we use secrets from the feature of <b>GitHub Actions</b> (both on organization and repository level).</p>
 <p><b>Note:</b> Everything related to <b>GitHub Actions</b> pipeline should go into <code>.github/</code> subdirectory.</p>
-<p>To keep our project <b>Maven</b> setup independent of the chosen deployment pipeline we keep dedicated <code>settings.xml</code> for <b>GitHub Actions</b> deploys that populates the credentials and other properties.</p>
 <p><b>Note:</b> Never, ever commit unencrypted keys to the repositories (not even private ones)!</p><section>
 <h3><a name="Environment_variables"></a>Environment variables</h3>
 <p>To pass the sensitive data into deployment pipeline we use secrets variables. Following environment variables are defined:</p>
@@ -109,7 +108,7 @@
             <p>&#169;      2015&#x2013;2021
 <a href="https://wrzasq.pl/">Rafał Wrzeszcz - Wrzasq.pl</a>
         <li id="publishDate" class="pull-right">Last Published: 2021-06-06</li>
-          <li id="projectVersion" class="pull-right">Version: 2.0.0</li>
+          <li id="projectVersion" class="pull-right">Version: 2.0.1</li>
 </p>
         </div>
       </div>
