@@ -2,20 +2,21 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015, 2017 - 2020 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017 - 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # WrzasqPl-Parent
 
-**WrzasqPl-Parent** is a generic bootstrap project structure that we use in all our projects (both open source, internal and commerial).
+**WrzasqPl-Parent** is a generic bootstrap project structure that we use in all our projects (both open source, internal
+and commercial).
 
-[![Build Status](https://travis-ci.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent.svg)](https://travis-ci.org/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
+[![Build Status](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/actions/workflows/build.yaml/badge.svg)](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/actions)
 [![Coverage Status](https://coveralls.io/repos/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg)](https://coveralls.io/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 
 # Usage
 
-To use it in your project, simply define `pl.wrzasq.parent:parent` as your project parent POM:
+To use it in your project, simply define `pl.wrzasq.parent:parent-generic` as your project parent POM:
 
 ```xml
 <project
@@ -29,7 +30,7 @@ To use it in your project, simply define `pl.wrzasq.parent:parent` as your proje
     <!-- core project settings -->
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>${version}</version>
     <parent>
         <groupId>pl.wrzasq.parent</groupId>
@@ -51,9 +52,8 @@ To use it in your project, simply define `pl.wrzasq.parent:parent` as your proje
 
 # Authors
 
-This project is published under [MIT license](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/tree/master/LICENSE).
-
-**pl.wrzasq.parent** is brought to you by [Rafał Wrzeszcz - Wrzasq.pl](https://wrzasq.pl).
+This project is brought to you by [Rafał Wrzeszcz - Wrzasq.pl](https://wrzasq.pl) and published under
+[MIT license](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/tree/master/LICENSE).
 
 List of contributors:
 

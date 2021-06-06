@@ -3,7 +3,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2016, 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2016, 2019, 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/DECORATION/1.4.0"
@@ -16,7 +16,7 @@
 
         <menu name="Guide">
             <item name="Deploy profile" href="guide/deploy.html"/>
-            <item name="Travis CI" href="guide/travis.html"/>
+            <item name="GitHub Actions" href="guide/github-actions.html"/>
         </menu>
 
         <menu ref="reports"/>

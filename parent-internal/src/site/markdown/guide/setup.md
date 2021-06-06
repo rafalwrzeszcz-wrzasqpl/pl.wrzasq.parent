@@ -2,11 +2,11 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2018 - 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2018 - 2019, 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 **Note:** This module sets up our common services integration, like **S3** repository access. Usually it has no use for
-anyone from outside.
+anyone from outside of our organization.
 
 # Internal setup
 
@@ -20,5 +20,5 @@ that handles `s3://` repository URLs and define two repositories:
 -   `aws-s3` for releases;
 -   `aws-s3-snapshot` for snapshots.
 
-Keep in mind that access to the repositories is restricted and you need to set it for yourself locally by defining
+Keep in mind that access to the repositories is restricted, and you need to set it for yourself locally by defining
 `<server>` entries in `~/.m2/settings.xml`.

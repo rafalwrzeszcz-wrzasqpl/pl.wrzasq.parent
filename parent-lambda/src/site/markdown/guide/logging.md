@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2020 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2020 - 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 Including this dependency in a **Lambda** project establishes a standard logging facility based on **SLF4J** (not that
@@ -32,5 +32,5 @@ Resources:
 
 ## Tracing
 
-Additionally also **X-Ray** instrumentor is included which makes all of AWS clients automatically instrumented for
+Additionally, also **X-Ray** instrumentor is included which makes all of AWS clients automatically instrumented for
 tracing.

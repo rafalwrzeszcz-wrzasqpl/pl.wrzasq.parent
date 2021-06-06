@@ -1,0 +1,212 @@
+##
+# This file is part of the pl.wrzasq.parent.
+#
+# @license http://mit-license.org/ The MIT license
+# @copyright 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+##
+
+comments:
+    active: true
+    excludes:
+        - "**/test/**"
+# TODO: impossible to make it working based on project-dependent template
+#    AbsentOrWrongFileLicense:
+#        active: true
+#        licenseTemplateFile: "license.template"
+#        licenseTemplateIsRegex: true
+    CommentOverPrivateFunction:
+        active: true
+    CommentOverPrivateProperty:
+        active: true
+# TODO: requires Detekt upgrade
+#    DeprecatedBlockTag:
+#        active: true
+    EndOfSentenceFormat:
+        active: true
+    UndocumentedPublicClass:
+        active: true
+    UndocumentedPublicFunction:
+        active: true
+    UndocumentedPublicProperty:
+        active: true
+
+complexity:
+    active: true
+    ComplexInterface:
+        active: true
+    ReplaceSafeCallChainWithRun:
+        active: true
+    StringLiteralDuplication:
+        active: true
+
+coroutines:
+    active: true
+    GlobalCoroutineUsage:
+        active: true
+    RedundantSuspendModifier:
+        active: true
+    SleepInsteadOfDelay:
+        active: true
+    SuspendFunWithFlowReturnType:
+        active: true
+
+empty-blocks:
+    active: true
+
+exceptions:
+    active: true
+    InstanceOfCheckForException:
+        active: true
+    NotImplementedDeclaration:
+        active: true
+    ObjectExtendsThrowable:
+        active: true
+
+formatting:
+    active: true
+    AnnotationOnSeparateLine:
+        active: true
+    ArgumentListWrapping:
+        active: true
+    EnumEntryNameCase:
+        active: true
+    ImportOrdering:
+        active: true
+        layout: ""
+    Indentation:
+        active: true
+    NoEmptyFirstLineInMethodBlock:
+        active: true
+    SpacingAroundAngleBrackets:
+        active: true
+    SpacingAroundDoubleColon:
+        active: true
+    SpacingAroundUnaryOperator:
+        active: true
+    SpacingBetweenDeclarationsWithAnnotations:
+        active: true
+    SpacingBetweenDeclarationsWithComments:
+        active: true
+
+naming:
+    active: true
+    FunctionMaxLength:
+        active: true
+        maximumFunctionNameLength: 60
+    InvalidPackageDeclaration:
+        active: true
+    NoNameShadowing:
+        active: true
+    NonBooleanPropertyPrefixedWithIs:
+        active: true
+    VariableMaxLength:
+        active: true
+
+performance:
+    active: true
+
+potential-bugs:
+    active: true
+    CastToNullableType:
+        active: true
+    Deprecation:
+        active: true
+    DontDowncastCollectionTypes:
+        active: true
+    ExitOutsideMain:
+        active: true
+    HasPlatformType:
+        active: true
+    IgnoredReturnValue:
+        active: true
+    ImplicitUnitReturnType:
+        active: true
+    MapGetWithNotNullAssertionOperator:
+        active: true
+    NullableToStringCall:
+        active: true
+    UnconditionalJumpStatementInLoop:
+        active: true
+    UnreachableCatchBlock:
+        active: true
+    UnusedUnaryOperator:
+        active: true
+    UselessPostfixExpression:
+        active: true
+
+style:
+    active: true
+    ClassOrdering:
+        active: true
+    CollapsibleIfStatements:
+        active: true
+    EqualsOnSignatureLine:
+        active: true
+    ExplicitCollectionElementAccessMethod:
+        active: true
+    ExplicitItLambdaParameter:
+        active: true
+    ExpressionBodySyntax:
+        active: true
+    ForbiddenMethodCall:
+        active: true
+    ForbiddenVoid:
+        active: true
+    MandatoryBracesIfStatements:
+        active: true
+    MandatoryBracesLoops:
+        active: true
+    NoTabs:
+        active: true
+    OptionalUnit:
+        active: true
+    OptionalWhenBraces:
+        active: true
+    PreferToOverPairSyntax:
+        active: true
+    RedundantExplicitType:
+        active: true
+    RedundantHigherOrderMapUsage:
+        active: true
+    RedundantVisibilityModifierRule:
+        active: true
+    SpacingBetweenPackageAndImports:
+        active: true
+    TrailingWhitespace:
+        active: true
+    UnderscoresInNumericLiterals:
+        active: true
+    UnnecessaryAnnotationUseSiteTarget:
+        active: true
+    UnnecessaryFilter:
+        active: true
+    UnnecessaryLet:
+        active: true
+    UnnecessaryParentheses:
+        active: true
+    UntilInsteadOfRangeTo:
+        active: true
+    UnusedImports:
+        active: true
+    UseArrayLiteralsInAnnotations:
+        active: true
+    UseCheckNotNull:
+        active: true
+    UseCheckOrError:
+        active: true
+    UseDataClass:
+        active: true
+    UseEmptyCounterpart:
+        active: true
+    UseIfEmptyOrIfBlank:
+        active: true
+    UseIfInsteadOfWhen:
+        active: true
+    UseIsNullOrEmpty:
+        active: true
+    UseOrEmpty:
+        active: true
+    UseRequire:
+        active: true
+    UseRequireNotNull:
+        active: true

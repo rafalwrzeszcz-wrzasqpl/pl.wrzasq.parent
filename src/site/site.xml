@@ -3,7 +3,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017, 2019 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2017, 2019, 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/DECORATION/1.4.0"
@@ -14,7 +14,7 @@
     <skin>
         <groupId>org.apache.maven.skins</groupId>
         <artifactId>maven-fluido-skin</artifactId>
-        <version>1.6</version>
+        <version>1.9</version>
     </skin>
 
     <bannerLeft>
@@ -59,7 +59,6 @@
             <item name="Build plugins" href="guide/plugins.html"/>
             <item name="Reporting plugins" href="guide/reports.html"/>
             <item name="Dependencies" href="guide/dependencies.html"/>
-            <item name="Lombok" href="guide/lombok.html"/>
         </menu>
 
         <menu ref="reports"/>
