@@ -56,11 +56,6 @@ jobs:
                 with:
                     java-version: "11"
                     distribution: "zulu"
-                    server-id: "ossrh"
-                    server-username: "OSSRH_USERNAME"
-                    server-password: "OSSRH_PASSWORD"
-                    gpg-private-key: "${{ secrets.GPG_PRIVATE_KEY }}"
-                    gpg-passphrase: "GPG_PASSPHRASE"
             -
                 uses: "actions/cache@v2.1.6"
                 with:
@@ -69,18 +64,23 @@ jobs:
             # Git setup
             -
                 run: |
-                    git config user.name "GitHub Actions" ;
-                    git config user.email "office@wrzasq.pl" ;
+                    git config user.name "GitHub Actions"
+                    git config user.email "office@wrzasq.pl"
+            -
+                uses: "crazy-max/ghaction-import-gpg@v3.1.0"
+                with:
+                    gpg-private-key: "${{ secrets.GPG_PRIVATE_KEY }}"
+                    passphrase: "${{ secrets.GPG_PASSPHRASE }}"
             # first make current version release
             -
                 run: "mvn -B versions:set versions:commit -DremoveSnapshot=true"
             -
                 run: |
-                    git add -u ;
-                    git commit -m "[skip ci] Automated release release." ;
+                    git add -u
+                    git commit -m "[skip ci] Automated release release."
             # perform a release
             -
-                run: "mvn -B -e clean deploy site -P deploy"
+                run: "mvn -B -e clean deploy site -P deploy --settings .github/settings.xml"
                 env:
                     GITHUB_ACTOR: "${{ secrets.GITHUB_ACTOR }}"
                     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -93,11 +93,11 @@ jobs:
             -
                 # in other projects we can use generic form but in pl.wrzasq.parent relations are more complex
                 run: |
-                    cp -r parent-detekt/target/site target/site/parent-detekt ;
-                    cp -r parent-generic/target/site target/site/parent-generic ;
-                    cp -r parent-internal/target/site target/site/parent-generic/parent-internal ;
-                    cp -r parent-opensource/target/site target/site/parent-generic/parent-opensource ;
-                    cp -r parent-lambda/target/site target/site/parent-generic/parent-opensource/parent-lambda ;
+                    cp -r parent-detekt/target/site target/site/parent-detekt
+                    cp -r parent-generic/target/site target/site/parent-generic
+                    cp -r parent-internal/target/site target/site/parent-generic/parent-internal
+                    cp -r parent-opensource/target/site target/site/parent-generic/parent-opensource
+                    cp -r parent-lambda/target/site target/site/parent-generic/parent-opensource/parent-lambda
             -
                 uses: "peaceiris/actions-gh-pages@v3.7.3"
                 with:
@@ -108,7 +108,7 @@ jobs:
                 run: "mvn -B build-helper:parse-version versions:set versions:commit -DnewVersion=\"\\${semver.majorVersion}.\\${semver.minorVersion}.\\${semver.nextIncrementalVersion}-SNAPSHOT\""
             -
                 run: |
-                    git add -u ;
+                    git add -u
                     git commit -m "[skip ci] New version bump."
             -
                 uses: "ad-m/github-push-action@v0.6.0"
