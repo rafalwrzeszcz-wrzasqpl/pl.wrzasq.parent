@@ -42,7 +42,7 @@ To use it in your project, simply define `pl.wrzasq.parent:parent-generic` as yo
 # Resources
 
 -   [GitHub page with API documentation](https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent)
--   [Contribution guide](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/blob/master/CONTRIBUTING.md)
+-   [Contribution guide](https://github.com/rafalwrzeszcz-wrzasqpl/.github/blob/master/CONTRIBUTING.md)
 -   [Issues tracker](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/issues)
 -   [Maven packages](https://search.maven.org/search?q=g:pl.wrzasq.parent)
 -   [Wrzasq.pl @ GitHub](https://github.com/rafalwrzeszcz-wrzasqpl)
