@@ -19,7 +19,7 @@
     <parent>
         <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent-generic</artifactId>
-        <version>2.0.3</version>
+        <version>2.0.4-SNAPSHOT</version>
         <relativePath>../parent-generic/</relativePath>
     </parent>
 
