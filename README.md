@@ -11,7 +11,6 @@
 and commercial).
 
 [![Build Status](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/actions/workflows/build.yaml/badge.svg)](https://github.com/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/actions)
-[![Coverage Status](https://coveralls.io/repos/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent/badge.svg)](https://coveralls.io/github/rafalwrzeszcz-wrzasqpl/pl.wrzasq.parent)
 
 # Usage
 

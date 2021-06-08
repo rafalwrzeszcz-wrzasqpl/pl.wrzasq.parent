@@ -15,7 +15,6 @@ inherited):
 -   `org.apache.maven.plugins:maven-enforcer-plugin`
 -   `org.apache.maven.plugins:maven-source-plugin`
 -   `org.codehaus.mojo:build-helper-maven-plugin`
--   `org.eluder.coveralls:coveralls-maven-plugin`
 -   `org.jacoco:jacoco-maven-plugin`
 
 Additionally, following plugins are defined in management section, so they are not automatically executed in your build,
@@ -72,10 +71,6 @@ defined to be used as-it-is - these resources won't be filtered.
 ## `org.codehaus.mojo:build-helper-maven-plugin`
 
 Build helper plugin exposes version components as a series of properties with prefix `semver.`.
-
-## `org.eluder.coveralls:coveralls-maven-plugin`
-
-Coveralls plugin is not bound to any phase by default, but it can be used from command line.
 
 ## `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
 
