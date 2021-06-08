@@ -496,6 +496,7 @@
                 <version>1.4.32</version>
                 <executions>
                     <execution>
+                        <phase>package</phase>
                         <goals>
                             <goal>javadoc</goal>
                             <goal>javadocJar</goal>
