@@ -99,6 +99,14 @@
         </site>
     </distributionManagement>
 
+    <!-- custom repositories -->
+    <repositories>
+        <repository>
+            <id>jitpack</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <!-- plugins configuration -->
     <build>
         <sourceDirectory>src/main/kotlin</sourceDirectory>
@@ -349,7 +357,7 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <imageName>${project.artifactId}</imageName>
+                        <imageName>${project.artifactId}.bin</imageName>
                     </configuration>
                 </plugin>
 
