@@ -21,8 +21,6 @@ Additionally, following plugins are defined in management section, so they are n
 but you can enable them by including them in your project (or are executed by default by **Maven** and only versions and
 configurations are overridden):
 
--   `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
--   `com.github.eirslett:frontend-maven-plugin`
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
 -   `org.apache.maven.plugins:maven-deploy-plugin`
@@ -71,18 +69,6 @@ defined to be used as-it-is - these resources won't be filtered.
 ## `org.codehaus.mojo:build-helper-maven-plugin`
 
 Build helper plugin exposes version components as a series of properties with prefix `semver.`.
-
-## `com.bluetrainsoftware.maven.plugins:s3-upload-maven-plugin`
-
-Executes `s3-upload` action during the `deploy` phase.
-
-## `com.github.eirslett:frontend-maven-plugin`
-
-Uses **Node** version `16.1.0` and **npm** version `7.12.0` and executes three stages:
-
--   `install-node-and-npm` which installs a local version of **Node** and **npm**;
--   `npm` which installs build tools defined in `package.json` file (**npm** packages);
--   further `npm` tool calls to forward **Maven** lifecycle phases to Node project.
 
 ## `org.apache.maven.plugins:maven-jar-plugin`
 

@@ -115,103 +115,6 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>com.bluetrainsoftware.maven.plugins</groupId>
-                    <artifactId>s3-upload-maven-plugin</artifactId>
-                    <version>1.7</version>
-                    <executions>
-                        <execution>
-                            <phase>deploy</phase>
-                            <goals>
-                                <goal>s3-upload</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <dependencies>
-                        <dependency>
-                            <groupId>javax.xml.bind</groupId>
-                            <artifactId>jaxb-api</artifactId>
-                            <version>2.3.1</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-
-                <plugin>
-                    <groupId>com.github.eirslett</groupId>
-                    <artifactId>frontend-maven-plugin</artifactId>
-                    <version>1.12.0</version>
-                    <configuration>
-                        <nodeVersion>v16.1.0</nodeVersion>
-                        <npmVersion>7.12.0</npmVersion>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>install-node-and-npm</id>
-                            <phase>initialize</phase>
-                            <goals>
-                                <goal>install-node-and-npm</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>npm-install</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>npm</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>npm-compile</id>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>npm</goal>
-                            </goals>
-                            <configuration>
-                                <arguments>run build</arguments>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>npm-test</id>
-                            <phase>test</phase>
-                            <goals>
-                                <goal>npm</goal>
-                            </goals>
-                            <configuration>
-                                <arguments>test</arguments>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>npm-package</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>npm</goal>
-                            </goals>
-                            <configuration>
-                                <arguments>run package</arguments>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>npm-verify</id>
-                            <phase>verify</phase>
-                            <goals>
-                                <goal>npm</goal>
-                            </goals>
-                            <configuration>
-                                <arguments>run verify</arguments>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>npm-site</id>
-                            <phase>site</phase>
-                            <goals>
-                                <goal>npm</goal>
-                            </goals>
-                            <configuration>
-                                <arguments>run site</arguments>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>3.1.0</version>
@@ -472,17 +375,17 @@
                                 <limit>
                                     <counter>BRANCH</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>0.95</minimum>
+                                    <minimum>0.85</minimum>
                                 </limit>
                                 <limit>
                                     <counter>INSTRUCTION</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>0.95</minimum>
+                                    <minimum>0.85</minimum>
                                 </limit>
                                 <limit>
                                     <counter>LINE</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>0.95</minimum>
+                                    <minimum>0.85</minimum>
                                 </limit>
                             </limits>
                         </rule>
