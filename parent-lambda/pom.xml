@@ -41,6 +41,7 @@
                         <ignoredDependency>com.amazonaws:aws-xray-recorder-sdk-aws-sdk-v2-instrumentor</ignoredDependency>
                         <ignoredDependency>io.symphonia:lambda-logging</ignoredDependency>
                         <ignoredDependency>javax.xml.bind:jaxb-api</ignoredDependency>
+                        <ignoredDependency>org.graalvm.sdk:graal-sdk</ignoredDependency>
                     </ignoredDependencies>
                 </configuration>
             </plugin>
@@ -48,6 +49,13 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.graalvm.sdk</groupId>
+            <artifactId>graal-sdk</artifactId>
+            <version>21.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-xray-recorder-sdk-aws-sdk-v2</artifactId>
