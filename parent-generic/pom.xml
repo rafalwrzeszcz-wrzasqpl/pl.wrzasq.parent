@@ -72,6 +72,7 @@
                         <ignoredDependency>org.jetbrains:annotations::</ignoredDependency>
                         <ignoredDependency>org.jetbrains.kotlin:kotlin-reflect::</ignoredDependency>
                         <ignoredDependency>org.jetbrains.kotlin:kotlin-stdlib::</ignoredDependency>
+                        <ignoredDependency>org.jetbrains.kotlin:kotlin-stdlib-jdk7::</ignoredDependency>
                         <ignoredDependency>org.jetbrains.kotlin:kotlin-stdlib-jdk8::</ignoredDependency>
                         <ignoredDependency>org.junit.jupiter:junit-jupiter-api::</ignoredDependency>
                         <ignoredDependency>org.junit.jupiter:junit-jupiter-engine::</ignoredDependency>
@@ -99,6 +100,12 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
+            <version>1.5.20</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk7</artifactId>
             <version>1.5.20</version>
         </dependency>
 
