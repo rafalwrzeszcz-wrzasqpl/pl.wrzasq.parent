@@ -76,6 +76,7 @@
                         <ignoredDependency>org.jetbrains.kotlin:kotlin-stdlib-jdk8::</ignoredDependency>
                         <ignoredDependency>org.junit.jupiter:junit-jupiter-api::</ignoredDependency>
                         <ignoredDependency>org.junit.jupiter:junit-jupiter-engine::</ignoredDependency>
+                        <ignoredDependency>org.junit.vintage:junit-vintage-engine::</ignoredDependency>
                         <ignoredDependnecy>org.slf4j:slf4j-nop::</ignoredDependnecy>
                     </ignoredDependencies>
                 </configuration>
@@ -118,28 +119,36 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java8</artifactId>
-            <version>6.10.3</version>
+            <version>6.11.0</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>6.10.3</version>
+            <version>6.11.0</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.0-M1</version>
+            <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.0-M1</version>
+            <version>5.7.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- TODO: remove once Cucumber supports JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
 
