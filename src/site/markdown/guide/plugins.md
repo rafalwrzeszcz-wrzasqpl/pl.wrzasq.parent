@@ -24,6 +24,7 @@ configurations are overridden):
 -   `org.apache.maven.plugins:maven-clean-plugin`
 -   `org.apache.maven.plugins:maven-compiler-plugin`
 -   `org.apache.maven.plugins:maven-deploy-plugin`
+-   `org.apache.maven.plugins:maven-exec-plugin`
 -   `org.apache.maven.plugins:maven-failsafe-plugin`
 -   `org.apache.maven.plugins:maven-install-plugin`
 -   `org.apache.maven.plugins:maven-jar-plugin`
