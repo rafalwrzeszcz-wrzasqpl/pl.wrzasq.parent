@@ -34,6 +34,7 @@ configurations are overridden):
 -   `org.codehaus.mojo:versions-maven-plugin`
 -   `org.graalvm.nativeimage:native-image-maven-plugin`
 -   `org.jetbrains.kotlin:kotlin-maven-plugin`
+-   `pl.wrzasq.parent:parent-nativelambda-plugin`
 
 Some of them are configured in specific way:
 
@@ -77,7 +78,11 @@ Generates **JAR** artifact with manifest containing project metadata.
 
 ## `org.graalvm.nativeimage:native-image-maven-plugin`
 
-Native image building (if enabled) generates an image with name of the project as executable during packaging.
+Native image building (if enabled) generates an image with name with extension `.bin`.
+
+## `pl.wrzasq.parent:parent-nativelambda-plugin`
+
+Lambda package is generated with same name as native image but with `.zip` extension.
 
 # Profiles
 

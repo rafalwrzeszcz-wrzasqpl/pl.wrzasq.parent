@@ -29,6 +29,26 @@
     <description>More detailed bootstrap with additional setup for open source projects.</description>
     <inceptionYear>2015</inceptionYear>
 
+    <!-- plugins configuration -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>pl.wrzasq.parent</groupId>
+                    <artifactId>parent-nativelambda-plugin</artifactId>
+                    <version>2.0.15-SNAPSHOT</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>package</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
     <!-- build profiles -->
     <profiles>
         <profile>
