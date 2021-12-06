@@ -12,6 +12,9 @@
             },
             {
                 "pattern": "com/amazonaws/xray/strategy/sampling/DefaultSamplingRules.json"
+            },
+            {
+                "pattern": ".*.kotlin_builtins"
             }
         ]
     }
