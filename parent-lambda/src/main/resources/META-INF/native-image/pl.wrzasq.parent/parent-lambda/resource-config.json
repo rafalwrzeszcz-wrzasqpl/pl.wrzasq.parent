@@ -1,0 +1,18 @@
+{
+    "resources": {
+        "includes": [
+            {
+                "pattern": "logback.xml"
+            },
+            {
+                "pattern": "com/amazonaws/xray/sdk.properties"
+            },
+            {
+                "pattern": "com/amazonaws/xray/interceptors/DefaultOperationParameterWhitelist.json"
+            },
+            {
+                "pattern": "com/amazonaws/xray/strategy/sampling/DefaultSamplingRules.json"
+            }
+        ]
+    }
+}
