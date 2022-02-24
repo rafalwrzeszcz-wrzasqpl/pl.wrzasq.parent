@@ -3,7 +3,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2022 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -273,7 +273,7 @@
                 <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
-                    <version>1.5.20</version>
+                    <version>1.6.10</version>
                     <executions>
                         <execution>
                             <goals>
@@ -282,7 +282,17 @@
                             </goals>
                         </execution>
                     </executions>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.jetbrains.kotlin</groupId>
+                            <artifactId>kotlin-maven-serialization</artifactId>
+                            <version>1.6.10</version>
+                        </dependency>
+                    </dependencies>
                     <configuration>
+                        <compilerPlugins>
+                            <plugin>kotlinx-serialization</plugin>
+                        </compilerPlugins>
                         <args>
                             <arg>-Xjvm-default=all</arg>
                         </args>
@@ -415,7 +425,7 @@
             <plugin>
                 <groupId>org.jetbrains.dokka</groupId>
                 <artifactId>dokka-maven-plugin</artifactId>
-                <version>1.4.32</version>
+                <version>1.6.10</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -430,7 +440,7 @@
                         <plugin>
                             <groupId>org.jetbrains.dokka</groupId>
                             <artifactId>kotlin-as-java-plugin</artifactId>
-                            <version>1.4.32</version>
+                            <version>1.6.10</version>
                         </plugin>
                     </dokkaPlugins>
                 </configuration>
