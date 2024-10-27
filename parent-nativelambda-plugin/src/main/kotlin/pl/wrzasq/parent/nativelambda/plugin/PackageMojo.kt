@@ -64,24 +64,21 @@ class PackageMojo : AbstractMojo() {
 
     private fun createPackageArchive() {
         ZipArchiveOutputStream(FileOutputStream("${project.build.directory}/${packageName}")).use {
-            it.putArchiveEntry(
-                ZipArchiveEntry(executableName).also { entry -> entry.unixMode = 755 }
-            )
+            it.putArchiveEntry(ZipArchiveEntry(executableName).also { entry -> entry.unixMode = 755 })
             File("${project.build.directory}/${executableName}").inputStream().use { input -> input.copyTo(it) }
             it.closeArchiveEntry()
 
             // add bootstrap file - needs to be executable
-            it.putArchiveEntry(
-                ZipArchiveEntry("bootstrap").also { entry -> entry.unixMode = 755 }
-            )
+            it.putArchiveEntry(ZipArchiveEntry("bootstrap").also { entry -> entry.unixMode = 755 })
             it.write(buildBootstrap().toByteArray())
             it.closeArchiveEntry()
         }
     }
 
-    private fun buildBootstrap() = "#!/bin/bash\n" +
-        "\n" +
-        "set -euo pipefail\n" +
-        "\n" +
-        "./$executableName\n"
+    private fun buildBootstrap() = """#!/bin/bash
+
+set -euo pipefail
+
+./$executableName
+"""
 }
