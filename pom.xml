@@ -3,7 +3,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2022 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2022, 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -570,8 +570,6 @@
     <modules>
         <module>parent-detekt</module>
         <module>parent-generic</module>
-        <module>parent-internal</module>
-        <module>parent-lambda</module>
         <module>parent-nativelambda-plugin</module>
         <module>parent-opensource</module>
     </modules>

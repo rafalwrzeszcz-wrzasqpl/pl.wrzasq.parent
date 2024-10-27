@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015, 2017, 2019 - 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015, 2017, 2019 - 2021, 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Parent POM
@@ -43,6 +43,3 @@ The other two parts are needed to provide shared **Detekt** ruleset and bind it 
 -   `parent` is a base project definition, but without code style checks (which require separate packaging to make it
     shared between external projects);
 -   `parent-detekt` is a packaged **Detekt** ruleset.
-
-Additionally, for serverless **Lambda** projects/modules there is `parent-lambda` module that establishes a common
-foundation for logging (and maybe other aspects in future).

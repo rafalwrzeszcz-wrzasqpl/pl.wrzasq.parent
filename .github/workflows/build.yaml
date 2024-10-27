@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2021, 2023 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2021, 2023 - 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
 ##
 
 on:
@@ -95,10 +95,8 @@ jobs:
                 run: |
                     cp -r parent-detekt/target/site target/site/parent-detekt
                     cp -r parent-generic/target/site target/site/parent-generic
-                    cp -r parent-internal/target/site target/site/parent-generic/parent-internal
                     cp -r parent-nativelambda-plugin/target/site target/site/parent-generic/parent-nativelambda-plugin
                     cp -r parent-opensource/target/site target/site/parent-generic/parent-opensource
-                    cp -r parent-lambda/target/site target/site/parent-generic/parent-opensource/parent-lambda
             -
                 uses: "peaceiris/actions-gh-pages@v3.7.3"
                 with:
