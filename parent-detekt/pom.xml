@@ -3,7 +3,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2021, 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -19,7 +19,7 @@
     <parent>
         <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent</artifactId>
-        <version>2.0.20-SNAPSHOT</version>
+        <version>3.0.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
 
@@ -28,30 +28,4 @@
     <url>https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.parent/parent-detekt/</url>
     <description>Detekt rules.</description>
     <inceptionYear>2021</inceptionYear>
-
-    <!-- build profiles -->
-    <profiles>
-        <profile>
-            <id>deploy</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

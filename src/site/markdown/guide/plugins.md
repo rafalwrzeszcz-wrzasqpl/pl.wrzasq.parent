@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2021, 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # Build plugins
@@ -40,7 +40,7 @@ Some of them are configured in specific way:
 
 ## `org.apache.maven.plugins:maven-compiler-plugin`
 
-Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 11**
+Java compilation is done with all possible linting restrictions (`-Xlint:all` compiler flag). It's set for **Java 17**
 version right now.
 
 ## `org.apache.maven.plugins:maven-dependency-plugin`
@@ -60,7 +60,7 @@ Dependency plugin is configured to ignore common test-scope dependencies that ma
 
 ## `org.apache.maven.plugins:maven-enforcer-plugin`
 
-Required **Maven** version is at least `3.3.9` and **Java** `11`.
+Required **Maven** version is at least `3.3.9` and **Java** `17`.
 
 ## `org.apache.maven.plugins:maven-resources-plugin`
 

@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2021, 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
 ##
 
 comments:
@@ -18,9 +18,8 @@ comments:
         active: true
     CommentOverPrivateProperty:
         active: true
-# TODO: requires Detekt upgrade
-#    DeprecatedBlockTag:
-#        active: true
+    DeprecatedBlockTag:
+        active: true
     EndOfSentenceFormat:
         active: true
     UndocumentedPublicClass:
@@ -43,9 +42,13 @@ coroutines:
     active: true
     GlobalCoroutineUsage:
         active: true
+    InjectDispatcher:
+        active: true
     RedundantSuspendModifier:
         active: true
     SleepInsteadOfDelay:
+        active: true
+    SuspendFunWithCoroutineScopeReceiver:
         active: true
     SuspendFunWithFlowReturnType:
         active: true
@@ -68,14 +71,62 @@ formatting:
         active: true
     ArgumentListWrapping:
         active: true
+    BlockCommentInitialStarAlignment:
+        active: true
+    ClassName:
+        active: true
+    CommentWrapping:
+        active: true
+    DiscouragedCommentLocation:
+        active: true
     EnumEntryNameCase:
+        active: true
+    EnumWrapping:
+        active: true
+    FunctionName:
+        active: true
+    FunctionReturnTypeSpacing:
+        active: true
+    FunctionSignature:
+        active: true
+    FunctionStartOfBodySpacing:
+        active: true
+    FunctionTypeReferenceSpacing:
+        active: true
+    FunKeywordSpacing:
         active: true
     ImportOrdering:
         active: true
         layout: ""
+    IfElseBracing:
+        active: true
+    IfElseWrapping:
+        active: true
     Indentation:
         active: true
+    KdocWrapping:
+        active: true
+    ModifierListSpacing:
+        active: true
+    MultilineExpressionWrapping:
+        active: true
+    NoBlankLineInList:
+        active: true
+    NoConsecutiveComments:
+        active: true
+    NoEmptyFirstLineInClassBody:
+        active: true
     NoEmptyFirstLineInMethodBlock:
+        active: true
+    NullableTypeSpacing:
+        active: true
+    ParameterListSpacing:
+        active: true
+    ParameterWrapping:
+        active: true
+    PropertyName:
+        active: true
+    PropertyWrapping:
         active: true
     SpacingAroundAngleBrackets:
         active: true
@@ -86,6 +137,22 @@ formatting:
     SpacingBetweenDeclarationsWithAnnotations:
         active: true
     SpacingBetweenDeclarationsWithComments:
+        active: true
+    SpacingBetweenFunctionNameAndOpeningParenthesis:
+        active: true
+    TrailingCommaOnCallSite:
+        active: true
+    TrailingCommaOnDeclarationSite:
+        active: true
+    TryCatchFinallySpacing:
+        active: true
+    TypeArgumentListSpacing:
+        active: true
+    TypeParameterListSpacing:
+        active: true
+    UnnecessaryParenthesesBeforeTrailingLambda:
+        active: true
+    Wrapping:
         active: true
 
 naming:
@@ -107,6 +174,8 @@ performance:
 
 potential-bugs:
     active: true
+    CastNullableToNonNullableType:
+        active: true
     CastToNullableType:
         active: true
     Deprecation:
@@ -123,9 +192,17 @@ potential-bugs:
         active: true
     MapGetWithNotNullAssertionOperator:
         active: true
+    MissingPackageDeclaration:
+        active: true
+    NullCheckOnMutableProperty:
+        active: true
     NullableToStringCall:
         active: true
+    PropertyUsedBeforeDeclaration:
+        active: true
     UnconditionalJumpStatementInLoop:
+        active: true
+    UnnecessaryNotNullCheck:
         active: true
     UnreachableCatchBlock:
         active: true
@@ -136,9 +213,19 @@ potential-bugs:
 
 style:
     active: true
+    AlsoCouldBeApply:
+        active: true
+    BracesOnIfStatements:
+        active: true
+    BracesOnWhenStatements:
+        active: true
+    CascadingCallWrapping:
+        active: true
     ClassOrdering:
         active: true
     CollapsibleIfStatements:
+        active: true
+    DoubleNegativeLambda:
         active: true
     EqualsOnSignatureLine:
         active: true
@@ -152,11 +239,15 @@ style:
         active: true
     ForbiddenVoid:
         active: true
-    MandatoryBracesIfStatements:
-        active: true
     MandatoryBracesLoops:
         active: true
+    MaxChainedCallsOnSameLine:
+        active: true
     NoTabs:
+        active: true
+    NullableBooleanCheck:
+        active: true
+    ObjectLiteralToLambda:
         active: true
     OptionalUnit:
         active: true
@@ -172,11 +263,17 @@ style:
         active: true
     SpacingBetweenPackageAndImports:
         active: true
+    StringShouldBeRawString:
+        active: true
     TrailingWhitespace:
         active: true
     UnderscoresInNumericLiterals:
         active: true
     UnnecessaryAnnotationUseSiteTarget:
+        active: true
+    UnnecessaryBackticks:
+        active: true
+    UnnecessaryBracesAroundTrailingLambda:
         active: true
     UnnecessaryFilter:
         active: true
@@ -187,6 +284,10 @@ style:
     UntilInsteadOfRangeTo:
         active: true
     UnusedImports:
+        active: true
+    UnusedParameter:
+        active: true
+    UnusedPrivateProperty:
         active: true
     UseArrayLiteralsInAnnotations:
         active: true
@@ -204,9 +305,13 @@ style:
         active: true
     UseIsNullOrEmpty:
         active: true
+    UseLet:
+        active: true
     UseOrEmpty:
         active: true
     UseRequire:
         active: true
     UseRequireNotNull:
+        active: true
+    UseSumOfInsteadOfFlatMapSize:
         active: true
