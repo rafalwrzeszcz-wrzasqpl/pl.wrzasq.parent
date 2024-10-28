@@ -87,8 +87,6 @@ formatting:
         active: true
     FunctionReturnTypeSpacing:
         active: true
-    FunctionSignature:
-        active: true
     FunctionStartOfBodySpacing:
         active: true
     FunctionTypeReferenceSpacing:
@@ -217,6 +215,8 @@ style:
         active: true
     BracesOnWhenStatements:
         active: true
+        singleLine: "necessary"
+        multiLine: "necessary"
     CascadingCallWrapping:
         active: true
     ClassOrdering:
@@ -259,8 +259,6 @@ style:
         active: true
     SpacingBetweenPackageAndImports:
         active: true
-    StringShouldBeRawString:
-        active: true
     TrailingWhitespace:
         active: true
     UnderscoresInNumericLiterals:
@@ -280,8 +278,6 @@ style:
     UntilInsteadOfRangeTo:
         active: true
     UnusedImports:
-        active: true
-    UnusedParameter:
         active: true
     UnusedPrivateProperty:
         active: true
