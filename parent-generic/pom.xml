@@ -73,6 +73,7 @@
                     <ignoredDependencies>
                         <ignoredDependency>io.mockk:mockk::</ignoredDependency>
                         <ignoredDependency>io.mockk:mockk-dsl-jvm::</ignoredDependency>
+                        <ignoredDependency>io.mockk:mockk-jvm::</ignoredDependency>
                         <ignoredDependency>org.jetbrains:annotations::</ignoredDependency>
                         <ignoredDependency>org.jetbrains.kotlin:kotlin-reflect::</ignoredDependency>
                         <ignoredDependency>org.jetbrains.kotlin:kotlin-stdlib::</ignoredDependency>
