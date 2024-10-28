@@ -17,7 +17,7 @@
     <groupId>pl.wrzasq.parent</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>3.0.1-SNAPSHOT</version>
+    <version>3.0.1</version>
 
     <!-- project meta info -->
     <name>WrzasqPl Parent</name>
