@@ -57,7 +57,7 @@ jobs:
                     server-username: "OSSRH_USERNAME"
                     server-password: "OSSRH_PASSWORD"
                     gpg-private-key: "${{ secrets.GPG_PRIVATE_KEY }}"
-                    gpg-passphrase: "GPG_PASSPHRASE"
+                    gpg-passphrase: "MAVEN_GPG_PASSPHRASE"
             -
                 uses: "actions/cache@v4.1.2"
                 with:
@@ -83,7 +83,7 @@ jobs:
                     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
                     OSSRH_USERNAME: "${{ secrets.OSSRH_USERNAME }}"
                     OSSRH_PASSWORD: "${{ secrets.OSSRH_PASSWORD }}"
-                    GPG_PASSPHRASE: "${{ secrets.GPG_PASSPHRASE }}"
+                    MAVEN_GPG_PASSPHRASE: "${{ secrets.GPG_PASSPHRASE }}"
             # deploy site as GitHub Pages - we previously had it integrated with Maven build in `site-deploy` phase
             # but net.trajano.wagon:wagon-git has a lot of problems with handling newer SSH connection protocols
             # and official GitHub Maven Pages plugin uses low-level Git API and exceeds rate limit easily
