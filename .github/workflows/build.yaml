@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2021, 2023 - 2024 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2021, 2023 - 2025 © by Rafał Wrzeszcz - Wrzasq.pl.
 ##
 
 on:
@@ -17,7 +17,7 @@ on:
 
 jobs:
     build:
-        if: "!contains(github.event.head_commit.message, '[skip ci]') || (github.event_name == 'schedule')"
+        if: "(github.event_name == 'push') || (github.repository != github.event.pull_request.head.repo.full_name)"
         runs-on: "ubuntu-24.04"
         strategy:
             matrix:
@@ -33,7 +33,7 @@ jobs:
                     java-version: "${{ matrix.java }}"
                     distribution: "zulu"
             -
-                uses: "actions/cache@v4.1.2"
+                uses: "actions/cache@v4.2.2"
                 with:
                     path: "~/.m2/repository/"
                     key: "${{ runner.os }}-m2-${{ matrix.java }}"
@@ -59,7 +59,7 @@ jobs:
                     gpg-private-key: "${{ secrets.GPG_PRIVATE_KEY }}"
                     gpg-passphrase: "MAVEN_GPG_PASSPHRASE"
             -
-                uses: "actions/cache@v4.1.2"
+                uses: "actions/cache@v4.2.2"
                 with:
                     path: "~/.m2/repository/"
                     key: "${{ runner.os }}-m2-17"
