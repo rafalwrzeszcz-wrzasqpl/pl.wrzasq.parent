@@ -144,7 +144,7 @@
         <dependency>
             <groupId>io.mockk</groupId>
             <artifactId>mockk-dsl-jvm</artifactId>
-            <version>1.13.13</version>
+            <version>1.14.2</version>
             <scope>test</scope>
         </dependency>
 
