@@ -2,7 +2,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017, 2019, 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2017, 2019, 2021, 2025 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 
 # `deploy` profile
@@ -16,6 +16,6 @@ as `mvn -P deploy`), which performs deployment to public repositories.
 
 Bound to phase `verify`, creates a certificate, which is needed to publish project artifact to staging repository.
 
-### `org.sonatype.plugins:nexus-staging-maven-plugin`
+### `org.sonatype.central:central-publishing-maven-plugin`
 
 Open source projects are configured to be deployed into central OSS Sonatype repository.
