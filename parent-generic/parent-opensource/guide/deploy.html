@@ -65,7 +65,7 @@
 # This file is part of the pl.wrzasq.parent.
 #
 # @license http://mit-license.org/ The MIT license
-# @copyright 2015 - 2017, 2019, 2021 © by Rafał Wrzeszcz - Wrzasq.pl.
+# @copyright 2015 - 2017, 2019, 2021, 2025 © by Rafał Wrzeszcz - Wrzasq.pl.
 -->
 <section><a id="deploy_profile"></a>
 <h1><code>deploy</code> profile</h1>
@@ -73,8 +73,8 @@
 as <code>mvn -P deploy</code>), which performs deployment to public repositories.</p><section><a id="Plugins"></a>
 <h2>Plugins</h2><section><a id="org.apache.maven.plugins.3Amaven-gpg-plugin"></a>
 <h3><code>org.apache.maven.plugins:maven-gpg-plugin</code></h3>
-<p>Bound to phase <code>verify</code>, creates a certificate, which is needed to publish project artifact to staging repository.</p></section><section><a id="org.sonatype.plugins.3Anexus-staging-maven-plugin"></a>
-<h3><code>org.sonatype.plugins:nexus-staging-maven-plugin</code></h3>
+<p>Bound to phase <code>verify</code>, creates a certificate, which is needed to publish project artifact to staging repository.</p></section><section><a id="org.sonatype.central.3Acentral-publishing-maven-plugin"></a>
+<h3><code>org.sonatype.central:central-publishing-maven-plugin</code></h3>
 <p>Open source projects are configured to be deployed into central OSS Sonatype repository.</p></section></section></section>
         </main>
       </div>
@@ -86,7 +86,7 @@ as <code>mvn -P deploy</code>), which performs deployment to public repositories
             <p>&#169;      2015&#x2013;${currentYear}
 <a href="https://wrzasq.pl/">Rafał Wrzeszcz - Wrzasq.pl</a>
         <li id="publishDate" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.lastpublished" ): $dateValue</li>
-          <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): 3.0.7</li>
+          <li id="projectVersion" class="pull-right">$i18n.getString( "site-renderer", $locale, "template.version" ): 3.0.8</li>
 </p>
         </div>
       </div>
