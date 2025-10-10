@@ -12,6 +12,20 @@ updates:
         directory: "/"
         schedule:
             interval: "daily"
+        groups:
+            maven-plugins:
+                patterns:
+                    - "org.apache.maven:*"
+                    - "org.apache.maven.plugins:*"
+            kotlin:
+                patterns:
+                    - "org.jetbrains.kotlin:*"
+            mockk:
+                patterns:
+                    - "io.mockk:*"
+            junit:
+                patterns:
+                    - "org.junit.jupiter:*"
     -
         package-ecosystem: "github-actions"
         directory: "/"
