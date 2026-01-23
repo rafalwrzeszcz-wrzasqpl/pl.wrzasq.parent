@@ -19,7 +19,7 @@
     <parent>
         <groupId>pl.wrzasq.parent</groupId>
         <artifactId>parent-generic</artifactId>
-        <version>3.0.29-SNAPSHOT</version>
+        <version>3.0.29</version>
         <relativePath>../parent-generic/</relativePath>
     </parent>
 
@@ -36,7 +36,7 @@
                 <plugin>
                     <groupId>pl.wrzasq.parent</groupId>
                     <artifactId>parent-nativelambda-plugin</artifactId>
-                    <version>3.0.29-SNAPSHOT</version>
+                    <version>3.0.29</version>
                     <executions>
                         <execution>
                             <goals>
