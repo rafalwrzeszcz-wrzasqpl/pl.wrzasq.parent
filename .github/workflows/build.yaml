@@ -95,7 +95,7 @@ jobs:
                     cp -r parent-nativelambda-plugin/target/site target/site/parent-generic/parent-nativelambda-plugin
                     cp -r parent-opensource/target/site target/site/parent-generic/parent-opensource
             -
-                uses: "peaceiris/actions-gh-pages@v4.0.0"
+                uses: "peaceiris/actions-gh-pages@v4.1.0"
                 with:
                     github_token: "${{ secrets.GITHUB_TOKEN }}"
                     publish_dir: "./target/site/"
